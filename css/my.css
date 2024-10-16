@@ -1,0 +1,13 @@
+.container-fluid {
+   background-color: green;
+   opacity: 25%;
+}
+
+nav {
+    background: green;
+}
+
+.navbar-brand {
+   opacity:100%;
+   font-size: 30px;
+}
