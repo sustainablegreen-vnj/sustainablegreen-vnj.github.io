@@ -1,0 +1,12 @@
+<div class="boxesofcontents">
+			<ol>
+				<li class ='box1'> 3G, Reuse, Reduce, Recycle </li>
+				<li class ='box2'> Limit energy and water</li>
+				<li class = 'box3'> Public Transporation </li>
+				<li class ='box4'> Solar Panels </li>
+				<li class ='box5'> Avoid Plastics </li>
+				<li class ='box6'> DIY  </li>
+				<li class ='box7'> Consider Donating </li>
+				<li class = 'b'> Grow Plants </li> 
+			</ol>
+		</div>

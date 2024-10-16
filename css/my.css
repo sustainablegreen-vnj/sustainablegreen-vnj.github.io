@@ -1,6 +1,6 @@
 .container-fluid {
    background-color: green;
-   opacity: 25%;
+   opacity: 75%;
 }
 
 nav {
@@ -10,4 +10,24 @@ nav {
 .navbar-brand {
    opacity:100%;
    font-size: 30px;
+}
+
+.box1{
+   width:20px;
+   border: 15px solid black;
+   padding:20px;
+   margin:20px;
+}
+
+.yap1{
+   font-family:Roboto;
+   margin:20px;
+   position:center;
+}
+.xhrpotbox{
+   
+   padding-left:20px;
+   padding-right:10px;
+   font-family:Roboto;
+   border:5px solid black;
 }

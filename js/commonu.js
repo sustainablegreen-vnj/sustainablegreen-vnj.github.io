@@ -1,0 +1,1 @@
+const gebi = document.getElementById.bind(document);
