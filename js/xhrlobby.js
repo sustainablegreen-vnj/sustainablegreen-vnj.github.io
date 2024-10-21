@@ -59,6 +59,11 @@ function fetchMeMyPages() {
                         title.textContent = metai["Title"];
                         infobox.appendChild(title);
 
+                        const link = document.createElement("a");
+                        link.href = "/";
+                        link.textContent = "Browse!";
+                        infobox.appendChild(link);
+
                         const desc = document.createElement("p");
                         desc.textContent = metai["Description"];
                         infobox.appendChild(desc);
