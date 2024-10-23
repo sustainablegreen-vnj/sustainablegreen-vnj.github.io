@@ -19,31 +19,129 @@ nav {
    margin:20px;
 }
 
+.boxesofcontents {
+   overflow-x: scroll;
+}
 .yap1{
    font-family:Roboto;
    margin:20px;
    position:center;
 }
-.xhrpotbox{
-   
-   padding-left:20px;
-   padding-right:10px;
-   font-family:Roboto;
+.xhrpotbox:hover{
+   width:15%;
+   padding:5px;
    border:5px solid black;
-   background-color:gray;
    animation-name: boxing;
-   animation-duration: 8s;
+   animation-duration: 4s;
    animation-iteration-count:infinite;
-   transition: background-color 0.5s ease;
+   transition: 1s ease;
+   position:center;
+   text-align:center;
+   float:left;
+   margin:5px;
+   word-wrap: break-word;
+   height:200px;
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
+   font-style: normal;
+}
+.xhrpotbox{
+   width:12%;
+   padding:5px;
+   word-wrap: break-word;
+   text-align:center;
+   float:left;
+   height:200px;
+   border:5px solid black;
+   margin:5px;
+   background-color:#0c3c2b;
+   transition:1s ease;
+   color:white;
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
+   font-style: normal;
+   font-size:15px;
 }
 
 @keyframes boxing{
-   0% {background-color: darkgreen; }
-   12.5% {background-color: green;}
-   25% {background-color: lightgreen}
-   37.5% {background-color: greenyellow;}
-   50% {background-color: yellow}
-   67.5% { background-color: greenyellow; }
-   80% { background-color: lightgreen;}
-   100% {background-color: green;}
+   0% {background-color: green;}
+   20% {background-color: #1B4332;}
+   40% {background-color: #2D6A4F;}
+   60% {background-color: #40916C;}
+   80% {background-color: #52B78B;}
+   100% {background-color: #95D5B2; }
+   80% {background-color: #52B78B;}
+   60%{background-color: #40916C;}
+   40% {background-color: #2D6A4F;}
+   20%{background-color: #1B4332;}
+   0% {background-color: green;}
+}
+
+
+
+
+/*space mono regular */
+.smr { 
+   font-family: "Space Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
+ }
+ /* space mono bold */
+ .smb {
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
+   font-style: normal;
+ }
+ /* space mono regular, italic */
+ .smri {
+   font-family: "Space Mono", monospace;
+   font-weight: 400;
+   font-style: italic;
+ }
+ /* space mono bold, italic */
+ .smbi {
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
+   font-style: italic;
+ }
+ 
+ .left header {
+   font-size:35px;
+   text-align:center;
+   width: 100%;
+   border-top: 5px black solid;
+   border-bottom: 5px black solid;
+ }
+ .left h4 {
+   font-size:20px;
+   float:center;
+   text-align:center;
+ }
+ 
+ .zigma {
+   border-top: 0px solid black;
+   border: 6px solid black;
+   height:500px;
+   margin: 45px;
+ }
+
+ .breaker{
+   width:100%;
+ }
+
+ .dramaintro{
+   width:100%;
+   height:100%;
+   border:0px;
+ }
+ .dramaintro img{
+   width:100%;
+   height:100%;
+   border:0px;
+   }
+a {
+   text-decoration: none;
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
+   font-style: normal;
 }

@@ -26,57 +26,56 @@ function fetchMyPagesData(pagesrc) {
 function fetchMeMyPages() {
     if(!xhrpot) return;
 
-    $.ajax({ // Fetch the directory, which is where all the articles are.
-        url: directoryFile,
-        success: function(result) {
-            // Set message
-            xhrpot.innerHTML = "";
-            const fmsg = document.createElement("a");
-            fmsg.textContent = "Fetching the articles now...";
-            xhrpot.appendChild(fmsg);
-            xhrpot.setAttribute("notready", "false");
+    fetch(directoryFile).then(function(response) { // Covert to text
+        return response.text(); 
+    }).then(function(directory) {
+        // Set message
+        xhrpot.innerHTML = "";
+        const fmsg = document.createElement("a");
+        fmsg.textContent = "Fetching the articles now...";
+        xhrpot.appendChild(fmsg);
+        xhrpot.setAttribute("notready", "false");
+        let dirftws = directory.split("\n");
+        let dirnftws = dirftws.map(function(fname) {
+            return `${articledir}/${fname}`;
+        });
 
-            let dirftws = result.split("\n");
-            let dirnftws = dirftws.map(function(fname) {
-                return `${articledir}/${fname}`;
-            });
+        dirnftws.forEach(function(element) {
+            fetch(element).then(function(response) {
+                return response.text();
+            }).then(function(text) {
+                if(xhrpot.getAttribute("notready") == "false") {
+                    xhrpot.innerHTML = "";
+                    xhrpot.removeAttribute("notready");
+                }
 
-            dirnftws.forEach(function(element) {
-                $.ajax({
-                    url: element,
-                    success: function(result2) {
-                        if(xhrpot.getAttribute("notready") == "false") {
-                            xhrpot.innerHTML = "";
-                            xhrpot.removeAttribute("notready");
-                        }
+                const metai = fetchMyPagesData(text);
+                
+                const infobox = document.createElement("div");
+                infobox.classList.add("xhrpotbox");
 
-                        const metai = fetchMyPagesData(result2);
-                        
-                        const infobox = document.createElement("div");
-                        infobox.classList.add("xhrpotbox");
+                const title = document.createElement("h3");
+                title.textContent = metai["Title"];
+                infobox.appendChild(title);
 
-                        const title = document.createElement("h3");
-                        title.textContent = metai["Title"];
-                        infobox.appendChild(title);
+                const link = document.createElement("a");
+                link.href = element;
+                link.textContent = "Browse!";
+                infobox.appendChild(link);
 
-                        const link = document.createElement("a");
-                        link.href = "/";
-                        link.textContent = "Browse!";
-                        infobox.appendChild(link);
+                const desc = document.createElement("p");
+                desc.textContent = metai["Description"];
+                infobox.appendChild(desc);
 
-                        const desc = document.createElement("p");
-                        desc.textContent = metai["Description"];
-                        infobox.appendChild(desc);
-
-                        xhrpot.appendChild(infobox);
-                    }
-                });
-            });
-        }
+                xhrpot.appendChild(infobox);
+            }).catch(function(_){/* Silent ignore */});
+        })
+    }).catch(function(reason) {
+        xhrpot.textContent = "There was an error fetching the pages: " + reason;
     })
 }
 
-$(function(){ // On ready, reference XHRPot, the TOC and start fetching.
+document.addEventListener("DOMContentLoaded", function(){ // On ready, reference XHRPot, the TOC and start fetching.
     xhrpot = gebi("XHRPot");
     fetchMeMyPages();
 });
