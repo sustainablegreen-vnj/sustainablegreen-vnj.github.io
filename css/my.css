@@ -23,39 +23,34 @@ nav {
    overflow-x: scroll;
 }
 .yap1{
-   font-family:Roboto;
+   font-family: "Space Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
    margin:20px;
    position:center;
 }
 .xhrpotbox:hover{
-   width:15%;
-   padding:5px;
-   border:5px solid black;
+   width:17%;
    animation-name: boxing;
-   animation-duration: 4s;
+   animation-duration: 6s;
    animation-iteration-count:infinite;
-   transition: 1s ease;
+   transition: 0.8s ease-in-out;
    position:center;
-   text-align:center;
-   float:left;
-   margin:5px;
-   word-wrap: break-word;
-   height:200px;
    font-family: "Space Mono", monospace;
    font-weight: 700;
    font-style: normal;
 }
 .xhrpotbox{
-   width:12%;
+   width:14%;
    padding:5px;
    word-wrap: break-word;
    text-align:center;
    float:left;
    height:200px;
    border:5px solid black;
-   margin:5px;
+   margin:2px;
    background-color:#0c3c2b;
-   transition:1s ease;
+   transition:0.8s ease-in-out;
    color:white;
    font-family: "Space Mono", monospace;
    font-weight: 700;
@@ -64,20 +59,14 @@ nav {
 }
 
 @keyframes boxing{
-   0% {background-color: green;}
-   20% {background-color: #1B4332;}
-   40% {background-color: #2D6A4F;}
-   60% {background-color: #40916C;}
-   80% {background-color: #52B78B;}
-   100% {background-color: #95D5B2; }
-   80% {background-color: #52B78B;}
-   60%{background-color: #40916C;}
-   40% {background-color: #2D6A4F;}
-   20%{background-color: #1B4332;}
-   0% {background-color: green;}
+   0% {background-color: #0c3c2b;}
+   16.6% {background-color: #1B4332;}
+   33.3% {background-color: #2D6A4F;}
+   50% {background-color: #40916C;}
+   66.6% {background-color: #2D6A4F;}
+   80%{background-color: #1B4332;}
+   100% {background-color: #0c3c2b;}
 }
-
-
 
 
 /*space mono regular */
@@ -133,6 +122,8 @@ nav {
    width:100%;
    height:100%;
    border:0px;
+   text-align:center;
+   font-size:75px;
  }
  .dramaintro img{
    width:100%;
