@@ -29,45 +29,44 @@ function fetchMeMyPages() {
     fetch(directoryFile).then(function(response) { // Covert to text
         return response.text(); 
     }).then(function(directory) {
-        // Set message
+
+        // Set fetching message
         xhrpot.innerHTML = "";
-        const fmsg = document.createElement("a");
+        const fmsg = document.createElement("p");
         fmsg.textContent = "Fetching the articles now...";
         xhrpot.appendChild(fmsg);
         xhrpot.setAttribute("notready", "false");
+
+        // Fetch all the items and create a new list of paths
         let dirftws = directory.split("\n");
         let dirnftws = dirftws.map(function(fname) {
             return `${articledir}/${fname}`;
         });
 
-        dirnftws.forEach(function(element) {
+        dirnftws.forEach(function(element) { // Loop over each directory entries
             fetch(element).then(function(response) {
                 return response.text();
             }).then(function(text) {
-                if(xhrpot.getAttribute("notready") == "false") {
+                if(xhrpot.getAttribute("notready") == "false") { // If still initial, mark as ready
                     xhrpot.innerHTML = "";
                     xhrpot.removeAttribute("notready");
                 }
 
-                const metai = fetchMyPagesData(text);
+                const metai = fetchMyPagesData(text); // Fetch page info
                 
-                const infobox = document.createElement("div");
+                const infobox = document.createElement("a"); // Create xhrpot box
+                infobox.href = element;
                 infobox.classList.add("xhrpotbox");
 
-                const title = document.createElement("h3");
+                const title = document.createElement("h3"); // Create header
                 title.textContent = metai["Title"];
                 infobox.appendChild(title);
 
-                const link = document.createElement("a");
-                link.href = element;
-                link.textContent = "Browse!";
-                infobox.appendChild(link);
-
-                const desc = document.createElement("p");
+                const desc = document.createElement("p"); // Create description
                 desc.textContent = metai["Description"];
                 infobox.appendChild(desc);
 
-                xhrpot.appendChild(infobox);
+                xhrpot.appendChild(infobox); // Put it to the xhrpot
             }).catch(function(_){/* Silent ignore */});
         })
     }).catch(function(reason) {
