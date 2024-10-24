@@ -118,6 +118,8 @@ nav {
    width:100%;
    border:5px solid black;
    margin-left:-6px;
+   border-bottom:0;
+   display:flex;
  }
 
  .dramaintro{
@@ -160,12 +162,17 @@ a {
    margin: 0 auto;
    letter-spacing:0.15em;
    animation:
-      typing1 3.5s steps(40,end),
+      fadeIn1 2.5 forwards,
+      typing1 2.5s steps(40,end),
       blink-caret1 0.75s step-end infinite;
+}
+@keyframes fadeIn1{
+   0% {opacity:0;}
+   100% {opacity:1;}
 }
 @keyframes typing1 {
    from {width: 0}
-   to {width: 100%}
+   to {width: 90%}
 }
 @keyframes blink-caret1 {
    from, to { border-color: transparent}
@@ -187,38 +194,104 @@ a {
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
+   opacity:0;
    animation:
-      typing1 3.5s steps(40,end),
-      blink-caret1 0.75s step-end infinite;
-   animation-delay: 4s;
+      fadeIn2 2.5 forwards,
+      typing2 2.5s steps(40,end),
+      blink-caret2 0.75s step-end infinite;
+   animation-delay: 2.5s;
+}
+@keyframes fadeIn2{
+   0% {opacity:0;}
+   100% {opacity:1;}
 }
 @keyframes typing2 {
-   0%{
-      width:0;
-      opacity:0;
+   0% {
+      width: 0%;
+      opacity: 1;
    }
-   1%{
+   99%{
+      width:70%;
       opacity:1;
    }
    100% {
+      width:70%;
       opacity:1;
-      width:95%;
    }
 }
 @keyframes blink-caret2 {
-   0%{
-      border-color:transparent;
-      opacity:0;
-   }
-   1%{
-      opacity:1;
-   }
-   50%{
-      border-color:green;
-   }
+   from, to {border-color:transparent;}
+   50% {border-color:green;}
  }
 
- .dram3{
+ .dram4 {
+   font-family: "Space Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
+   width:100%;
+   height:100%;
+   border:0px;
+   text-align:center;
+   font-size:40px;
+   overflow: hidden;
+   word-wrap:break-word;
+   border-right: .15em solid green;
+   white-space: nowrap;
+   margin: 0 auto;
+   letter-spacing:0.15em;
+   opacity:0;
+   animation:
+      fadeIn3 2.5 forwards,
+      typing4 2.5s steps(40,end),
+      blink-caret4 0.75s step-end infinite;
+   animation-delay: 5s;
+ }
+ @keyframes fadeIn3{
+   0% {opacity:0;}
+   100% {opacity:1;}
+ }
+ @keyframes typing4 {
+   0% {width: 0%;opacity: 1;}
+   99%{width: 50%;opacity:1;}
+   100% {width:50%;opacity:1;
+   }
+}
+@keyframes blink-caret4 {
+   from, to {border-color:transparent;}
+   50% {border-color:green;}
+ }
+
+ .dram3 {
+   font-family: "Space Mono", monospace; font-weight: 400; font-style: normal;
+   width: 100%; height: 100%; border: 0px;
+   text-align: center; font-size: 40px;
+   overflow: hidden; border-right: .15em solid green;
+   white-space: nowrap; margin: 0 auto;
+   letter-spacing: 0.15em;
+   opacity: 0;
+   animation:
+      fadeIn4 3s forwards,
+      typing3 3s steps(40, end),
+      blink-caret3 0.75s step-end infinite;
+   animation-delay: 7.5s;
+}
+
+@keyframes fadeIn4 {
+   0% { opacity: 0; }
+   100% { opacity: 1;}
+}
+
+@keyframes typing3 {
+   0% { width: 0%; opacity: 1; }
+   99% { width: 100%; opacity: 1; }
+   100% { width: 100%; opacity: 1;}
+}
+@keyframes blink-caret3 {
+   from, to {border-color:transparent;}
+   50% {border-color:green;}
+ }
+
+ .dram5{
    font-family: "Space Mono", monospace;
    font-weight: 400;
    font-style: normal;
@@ -232,16 +305,17 @@ a {
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
+   opacity:0;
    animation:
-      typing1 3.5s steps(40,end),
-      blink-caret1 0.75s step-end infinite;
-   animation-delay:8s;
-}
-@keyframes typing3 {
-   from {width: 0}
-   to {width: 100%}
-}
-@keyframes blink-caret3 {
-   from, to { border-color: transparent}
-   50% {border-color:green;}
+      fadeIn3 3s forwards,
+      typing3 2.5s steps(40,end),
+      blink-caret3 0.75s step-end infinite;
+   animation-delay:10.5s;
+ }
+
+ .dramlast{
+   font-size:100%;
+   font-family: "Space Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
  }
