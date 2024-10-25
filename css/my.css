@@ -32,9 +32,8 @@ nav {
 .xhrpotbox:hover{
    width:17%;
    animation-name: boxing;
-   animation-duration: 6s;
+   animation-duration: 4s;
    animation-iteration-count:infinite;
-   transition: 0.8s ease-in-out;
    position:center;
    font-family: "Space Mono", monospace;
    font-weight: 700;
@@ -56,6 +55,7 @@ nav {
    font-weight: 700;
    font-style: normal;
    font-size:15px;
+   background-image:"https://images.unsplash.com/photo-1629197511831-f7ed9c3a51af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 }
 
 @keyframes boxing{
@@ -66,6 +66,7 @@ nav {
    66.6% {background-color: #2D6A4F;}
    80%{background-color: #1B4332;}
    100% {background-color: #0c3c2b;}
+
 }
 
 
@@ -129,10 +130,12 @@ nav {
    text-align:center;
    font-size:50px;
    overflow: hidden;
-   border-right: .15em solid green;
+   border-right: .15em solid black;
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
+   background-color:black;
+   color:white;
  }
 
 a {
@@ -146,11 +149,12 @@ a {
    font-family: "Space Mono", monospace;
    font-weight: 400;
    font-style: normal;
+   font-size:100px;
+   
    width:100%;
    height:100%;
    border:0px;
    text-align:center;
-   font-size:100px;
    overflow: hidden;
    border-right: .15em solid green;
    white-space: nowrap;
@@ -309,16 +313,69 @@ a {
  }
 
  .dramlast{
-   font-size:100%;
    font-family: "Space Mono", monospace;
    font-weight: 400;
    font-style: normal;
+   width:100%;
+   border:0px;
+   text-align:center;
+   overflow: hidden;
+   border-right: .15em solid black;
+   white-space: nowrap;
+   margin: 0 auto;
+   letter-spacing:0.15em;
+   background-color:black;
+   color:white;
+   padding-top:25%;
+   padding-bottom:25%;
+   font-size:100px;
  }
+
+@media (max-width:800px){
+   .dramlast{
+      font-size:25px;
+   }
+   .dram1{
+      font-size:22px;
+   }
+   .dram2, .dram4{
+      font-size:20px;
+   }
+   .dram3{
+      font-size:14px;
+   }
+   .dram5{
+      font-size:15px;
+   }
+}
+
+@media(max-width:1200px){
+   .dramlast{
+      font-size:40px;
+   }
+   .dram1{
+      font-size:35px;
+   }
+   .dram2, .dram4{
+      font-size:30px;
+   }
+   .dram3{
+      font-size:28px;
+   }
+   .dram5{
+      font-size:28px;
+   }
+}
+
+
 
  .bg1{
    width:100%;
    height:100%;
    opacity:70%;
-   margin-top:-5px;
    
+ }
+ body{
+   margin:0;
+   padding:0;
  }
