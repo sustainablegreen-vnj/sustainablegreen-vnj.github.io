@@ -1,3 +1,7 @@
+:root { /* Put CSS Variables here */
+   --xhrpot-image: "#fffff";
+}
+
 .container-fluid {
    background-color: green;
    opacity: 75%;
@@ -20,7 +24,12 @@ nav {
 }
 
 .boxesofcontents {
-   overflow-x: scroll;
+   display:flex;
+   gap:3vmin;
+   position:absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-30%,-50%);
 }
 .yap1{
    font-family: "Space Mono", monospace;
@@ -40,12 +49,13 @@ nav {
    font-style: normal;
 }
 .xhrpotbox{
-   width:14%;
+   gap:4vmin;
    padding:5px;
    word-wrap: break-word;
    text-align:center;
    float:left;
-   height:200px;
+   top:50%;
+   left:50%;
    border:5px solid black;
    margin:2px;
    background-color:#0c3c2b;
@@ -55,7 +65,19 @@ nav {
    font-weight: 700;
    font-style: normal;
    font-size:15px;
-   background-image:"https://images.unsplash.com/photo-1629197511831-f7ed9c3a51af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+   background-image: url("https://waste-management-world.com/imager/media/wasteManagementWorld/3820706/AdobeStock_571968683_428fd902f4247199467725e7eccf1673.jpeg");
+   object-fit:cover;
+   object-position:center;
+   overflow:hidden;
+   display:flex;
+   transform:translate(0,-50%);
+}
+
+.boxesofcontents > .bg{
+   width:50vmin;
+   height:60vmin;
+   object-fit:cover;
+   object-position: 100% center;
 }
 
 @keyframes boxing{
@@ -149,46 +171,44 @@ a {
    font-family: "Space Mono", monospace;
    font-weight: 400;
    font-style: normal;
-   font-size:100px;
-   
-   width:100%;
-   height:100%;
+   font-size:6vmin;
+   width:85vmin;
    border:0px;
    text-align:center;
    overflow: hidden;
-   border-right: .15em solid green;
+   border-right: .15em solid green; 
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
    animation:
       fadeIn1 2.5 forwards,
       typing1 2.5s steps(40,end),
-      blink-caret1 0.75s step-end infinite;
+      blink-caret1 0.75s step-end 5;
 }
 @keyframes fadeIn1{
    0% {opacity:0;}
-   100% {opacity:1;}
+   100% {opacity:1; border-right:black;}
 }
 @keyframes typing1 {
    from {width: 0}
    to {width: 90%}
 }
+
 @keyframes blink-caret1 {
    from, to { border-color: transparent}
    50% {border-color:green;}
- }
+ } 
 
  .dram2{
    font-family: "Space Mono", monospace;
    font-weight: 400;
    font-style: normal;
-   width:100%;
-   height:100%;
+   width:120vmin;
    border:0px;
    text-align:center;
-   font-size:75px;
+   font-size:4vmin;
    overflow: hidden;
-   word-wrap:break-word;
+   left:50%; right:50%;
    border-right: .15em solid green;
    white-space: nowrap;
    margin: 0 auto;
@@ -197,12 +217,12 @@ a {
    animation:
       fadeIn2 2.5 forwards,
       typing2 2.5s steps(40,end),
-      blink-caret2 0.75s step-end infinite;
+      blink-caret2 0.75s step-end 5;
    animation-delay: 2.5s;
 }
 @keyframes fadeIn2{
    0% {opacity:0;}
-   100% {opacity:1;}
+   100% {opacity:1; border-right:black;}
 }
 @keyframes typing2 {
    0% {
@@ -227,11 +247,10 @@ a {
    font-family: "Space Mono", monospace;
    font-weight: 400;
    font-style: normal;
-   width:100%;
-   height:100%;
+   width:120vmin;
    border:0px;
    text-align:center;
-   font-size:75px;
+   font-size:4vmin;
    overflow: hidden;
    word-wrap:break-word;
    border-right: .15em solid green;
@@ -242,12 +261,12 @@ a {
    animation:
       fadeIn3 2.5 forwards,
       typing4 2.5s steps(40,end),
-      blink-caret4 0.75s step-end infinite;
+      blink-caret4 0.75s step-end 5;
    animation-delay: 5s;
  }
  @keyframes fadeIn3{
    0% {opacity:0;}
-   100% {opacity:1;}
+   100% {opacity:1; border-right:black;}
  }
  @keyframes typing4 {
    0% {width: 0%;opacity: 1;}
@@ -262,8 +281,8 @@ a {
 
  .dram3 {
    font-family: "Space Mono", monospace; font-weight: 400; font-style: normal;
-   width: 100%; height: 100%; border: 0px;
-   text-align: center; font-size: 40px;
+   width: 155vmin; border: 0px;
+   text-align: center; font-size: 4vmin;
    overflow: hidden; border-right: .15em solid green;
    white-space: nowrap; margin: 0 auto;
    letter-spacing: 0.15em;
@@ -271,13 +290,13 @@ a {
    animation:
       fadeIn4 3s forwards,
       typing3 3s steps(40, end),
-      blink-caret3 0.75s step-end infinite;
+      blink-caret3 0.75s step-end 5;
    animation-delay: 7.5s;
 }
 
 @keyframes fadeIn4 {
    0% { opacity: 0; }
-   100% { opacity: 1;}
+   100% { opacity: 1; border-right: black;}
 }
 
 @keyframes typing3 {
@@ -294,11 +313,11 @@ a {
    font-family: "Space Mono", monospace;
    font-weight: 400;
    font-style: normal;
-   width:100%;
+   width:120vmin;
    height:100%;
    border:0px;
    text-align:center;
-   font-size:50px;
+   font-size:4vmin;
    overflow: hidden;
    border-right: .15em solid green;
    white-space: nowrap;
@@ -308,7 +327,7 @@ a {
    animation:
       fadeIn3 3s forwards,
       typing3 2.5s steps(40,end),
-      blink-caret3 0.75s step-end infinite;
+      blink-caret3 0.75s step-end 5;
    animation-delay:10.5s;
  }
 
@@ -328,53 +347,15 @@ a {
    color:white;
    padding-top:25%;
    padding-bottom:25%;
-   font-size:100px;
+   font-size:4vmin;
  }
-
-@media (max-width:800px){
-   .dramlast{
-      font-size:25px;
-   }
-   .dram1{
-      font-size:22px;
-   }
-   .dram2, .dram4{
-      font-size:20px;
-   }
-   .dram3{
-      font-size:14px;
-   }
-   .dram5{
-      font-size:15px;
-   }
-}
-
-@media(max-width:1200px){
-   .dramlast{
-      font-size:40px;
-   }
-   .dram1{
-      font-size:35px;
-   }
-   .dram2, .dram4{
-      font-size:30px;
-   }
-   .dram3{
-      font-size:28px;
-   }
-   .dram5{
-      font-size:28px;
-   }
-}
-
-
 
  .bg1{
    width:100%;
    height:100%;
    opacity:70%;
-   
  }
+
  body{
    margin:0;
    padding:0;
