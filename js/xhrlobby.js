@@ -72,27 +72,30 @@ function fetchMeMyPages() {
 
                 const metai = fetchMyPagesData(text); // Fetch page info
                 
-                const infobox = document.createElement("a"); // Create xhrpot box
-                infobox.href = element;
+                const infobox = document.createElement("img"); // Create xhrpot box
+                infobox.src = metai.Image;
+                infobox.alt = `${metai.Title}: ${metai.Description}`;
+                infobox.onclick = function(_)  {
+                    window.location.href = element;
+                }
+                infobox.style.cursor = "pointer";
                 infobox.classList.add("xhrpotbox");
-
-                const title = document.createElement("h3"); // Create header
-                title.textContent = metai["Title"];
-                infobox.appendChild(title);
-
-                const desc = document.createElement("p"); // Create description
-                desc.textContent = metai["Description"];
-                infobox.appendChild(desc);
+                infobox.classList.add("bg");
 
                 xhrpot.appendChild(infobox); // Put it to the xhrpot
             }).catch(function(_){/* Silent ignore */});
         })
     }).catch(function(reason) {
         xhrpot.textContent = "There was an error fetching the pages: " + reason;
-    })
+    });
+}
+
+function carouselMyFetches() {
+
 }
 
 document.addEventListener("DOMContentLoaded", function(){ // On ready, reference XHRPot, the TOC and start fetching.
     xhrpot = gebi("XHRPot");
-    fetchMeMyPages();
+    // fetchMeMyPages();
+    carouselMyFetches();
 });
