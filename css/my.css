@@ -224,7 +224,7 @@ a {
       fadeIn2 2.5 forwards,
       typing2 2.5s steps(40,end),
       blink-caret2 0.75s step-end 5;
-   animation-delay: 2.5s;
+   animation-delay: 2s;
 }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -267,7 +267,7 @@ a {
       fadeIn3 2.5 forwards,
       typing4 2.5s steps(40,end),
       blink-caret4 0.75s step-end 5;
-   animation-delay: 5s;
+   animation-delay: 4s;
  }
  @keyframes fadeIn3{
    0% {opacity:0;}
@@ -297,7 +297,7 @@ a {
       fadeIn4 3s forwards,
       typing3 3s steps(40, end),
       blink-caret3 0.75s step-end 5;
-   animation-delay: 7.5s;
+   animation-delay: 6s;
 }
 
 @keyframes fadeIn4 {
@@ -333,7 +333,7 @@ a {
       fadeIn3 3s forwards,
       typing3 2.5s steps(40,end),
       blink-caret3 0.75s step-end 5;
-   animation-delay:10.5s;
+   animation-delay:8s;
  }
 
  .dramlast{
