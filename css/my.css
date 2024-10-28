@@ -31,7 +31,6 @@ nav {
    position:absolute;
    left:50%;
    top:50%;
-   
    transform: translate(-30%,0%);
    user-select:none;
 }
@@ -83,7 +82,8 @@ nav {
    object-position: 100% center;
 }
 .boxesofcontents > .bg:hover{
-   width:65vmin;
+   width:48.5vmax;
+   padding:3px;
 }
 
 @keyframes boxing{
@@ -177,7 +177,7 @@ a {
    font-family: "Cardo", serif;
    font-weight: 400;
    font-style: normal;
-   font-size:5vmax;
+   font-size:2vmax;
    width:100vw;
    height:30vh;
    border:0px;
@@ -186,11 +186,13 @@ a {
    border-right: .15em solid green; 
    white-space: nowrap;
    margin: 0 auto;
+   opacity:0;
    letter-spacing:0.15em;
    animation:
       fadeIn1 2.5 forwards,
       typing1 2.5s steps(40,end),
       blink-caret1 0.75s step-end 5;
+   animation-delay:8s;
 }
 @keyframes fadeIn1{
    0% {opacity:0;}
@@ -224,7 +226,6 @@ a {
       fadeIn2 2.5 forwards,
       typing2 2.5s steps(40,end),
       blink-caret2 0.75s step-end 5;
-   animation-delay: 2s;
 }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -267,7 +268,7 @@ a {
       fadeIn3 2.5 forwards,
       typing4 2.5s steps(40,end),
       blink-caret4 0.75s step-end 5;
-   animation-delay: 4s;
+   animation-delay: 2s;
  }
  @keyframes fadeIn3{
    0% {opacity:0;}
@@ -297,7 +298,7 @@ a {
       fadeIn4 3s forwards,
       typing3 3s steps(40, end),
       blink-caret3 0.75s step-end 5;
-   animation-delay: 6s;
+   animation-delay: 4s;
 }
 
 @keyframes fadeIn4 {
@@ -333,7 +334,7 @@ a {
       fadeIn3 3s forwards,
       typing3 2.5s steps(40,end),
       blink-caret3 0.75s step-end 5;
-   animation-delay:8s;
+   animation-delay:6s;
  }
 
  .dramlast{
@@ -364,13 +365,21 @@ a {
  body{
    margin:0;
    padding:0;
+   overflow-x:hidden;
  }
 
 .Firstyap{
    width:100vw;
    height:100vh;
-   background-color:grey;
-   text-align:right;
-   font-size:4vmin;
-   color:black;
+   display:flex;
+   position:absolute;
+   transform: translate(0%,50%);
 }
+
+.s {
+   font-size:4vmax;
+   text-align:right;
+   float:right;
+   background-color:gray;
+}
+
