@@ -4,6 +4,7 @@
    --xhrpot-image: "#fffff";
 }
 
+
 .container-fluid {
    background-color: green;
    opacity: 75%;
@@ -27,12 +28,13 @@ nav {
 
 .boxesofcontents {
    display:flex;
-   gap:4vmin;
+   gap:2vmax;
    position:absolute;
    left:50%;
    top:50%;
    transform: translate(-30%,0%);
    user-select:none;
+   text-align:center;
 }
 .yap1{
    font-family: "Space Mono", monospace;
@@ -42,7 +44,7 @@ nav {
    position:center;
 }
 .xhrpotbox:hover{
-   width:17%;
+   background-color:darkgreen;
    animation-name: boxing;
    animation-duration: 4s;
    animation-iteration-count:infinite;
@@ -52,14 +54,13 @@ nav {
    font-style: normal;
 }
 .xhrpotbox{
-   gap:4vmin;
+   gap:2vmax;
    word-wrap: break-word;
    text-align:center;
    float:left;
    top:50%;
    left:50%;
-   border:5px solid black;
-   margin:2px;
+   border:0;
    transition:0.8s ease-in-out;
    color:white;
    font-family: "Space Mono", monospace;
@@ -76,14 +77,14 @@ nav {
 }
 
 .boxesofcontents > .bg{
-   width:40vmin;
-   height:60vmin;
+   width:12vmax;
+   height:20vmax;
    object-fit:cover;
    object-position: 100% center;
 }
 .boxesofcontents > .bg:hover{
    width:48.5vmax;
-   padding:3px;
+   
 }
 
 @keyframes boxing{
@@ -189,14 +190,12 @@ a {
    opacity:0;
    letter-spacing:0.15em;
    animation:
-      fadeIn1 2.5 forwards,
-      typing1 2.5s steps(40,end),
-      blink-caret1 0.75s step-end 5;
+      fadeIn1 2.5 forwards;
    animation-delay:8s;
 }
 @keyframes fadeIn1{
-   0% {opacity:0;}
-   100% {opacity:1; border-right:black;}
+   from {opacity:0;}
+   to {opacity:1; border-right:black;}
 }
 @keyframes typing1 {
    from {width: 0}
@@ -365,14 +364,18 @@ a {
  body{
    margin:0;
    padding:0;
-   overflow-x:hidden;
+   
+   background-color:black;
+ }
+
+ #XHRPotFetchy{
+   color:white;
  }
 
 .Firstyap{
    width:100vw;
    height:100vh;
-   display:flex;
-   position:absolute;
+
    transform: translate(0%,50%);
 }
 
@@ -383,3 +386,12 @@ a {
    background-color:gray;
 }
 
+.pic1{
+   width:20vmax;
+   height:20vmax;
+}
+
+.nekat1{
+   padding-top:2vmax;
+   text-align:center;
+}

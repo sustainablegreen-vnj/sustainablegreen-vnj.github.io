@@ -91,7 +91,49 @@ function fetchMeMyPages() {
 }
 
 function carouselMyFetches() {
-
+    const handleOnDown = e => xhrpot.dataset.mouseDownAt = e.clientX;
+    
+    const handleOnUp = () => {
+      xhrpot.dataset.mouseDownAt = "0";  
+      xhrpot.dataset.prevPercentage = xhrpot.dataset.percentage;
+    }
+    
+    const handleOnMove = e => {
+      if(xhrpot.dataset.mouseDownAt === "0") return;
+      
+      const mouseDelta = parseFloat(xhrpot.dataset.mouseDownAt) - e.clientX,
+            maxDelta = window.innerWidth / 2;
+      
+      const percentage = (mouseDelta / maxDelta) * -100,
+            nextPercentageUnconstrained = parseFloat(xhrpot.dataset.prevPercentage) + percentage,
+            nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+      
+      xhrpot.dataset.percentage = nextPercentage;
+      
+      xhrpot.animate({
+        transform: `translate(${nextPercentage}%, -50%)`
+      }, { duration: 1200, fill: "forwards" });
+      
+      for(const image of xhrpot.getElementsByClassName("image")) {
+        image.animate({
+          objectPosition: `${100 + nextPercentage}% center`
+        }, { duration: 1200, fill: "forwards" });
+      }
+    }
+    
+    /* -- Had to add extra lines for touch events -- */
+    
+    window.onmousedown = e => handleOnDown(e);
+    
+    window.ontouchstart = e => handleOnDown(e.touches[0]);
+    
+    window.onmouseup = e => handleOnUp(e);
+    
+    window.ontouchend = e => handleOnUp(e.touches[0]);
+    
+    window.onmousemove = e => handleOnMove(e);
+    
+    window.ontouchmove = e => handleOnMove(e.touches[0]);
 }
 
 document.addEventListener("DOMContentLoaded", function(){ // On ready, reference XHRPot, the TOC and start fetching.
@@ -99,3 +141,4 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
     // fetchMeMyPages();
     carouselMyFetches();
 });
+
