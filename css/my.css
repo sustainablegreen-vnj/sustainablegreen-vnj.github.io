@@ -32,7 +32,7 @@ nav {
    position:absolute;
    left:50%;
    top:50%;
-   transform: translate(-30%,0%);
+   transform: translate(0%,0%);
    user-select:none;
    text-align:center;
 }
@@ -394,4 +394,12 @@ a {
 .nekat1{
    padding-top:2vmax;
    text-align:center;
+}
+
+.upper{
+   color:white;
+   float:center;
+   text-align:center;
+   font-size:5vmax;
+   font-family:"Comic Sans ms", monospace;
 }
