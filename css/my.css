@@ -77,13 +77,14 @@ nav {
 }
 
 .boxesofcontents > .bg{
-   width:12vmax;
-   height:20vmax;
+   width:15vmax;
+   height: 15vmax;
    object-fit:cover;
    object-position: 100% center;
+   animation-name:bioxking;
 }
 .boxesofcontents > .bg:hover{
-   width:48.5vmax;
+   width:16vmax;
    
 }
 
@@ -402,4 +403,8 @@ a {
    text-align:center;
    font-size:5vmax;
    font-family:"Comic Sans ms", monospace;
+}
+
+.brd{
+   color:white;
 }
