@@ -192,7 +192,7 @@ nav {
    position:fixed;
    text-align:center;
    justify-content:center;
-   transform:translate(-50%,-50%);
+   transform:translate(-50%,0%);
    font-family: "Space Mono", monospace;
    font-weight: 700;
    font-style: underline;
@@ -348,9 +348,10 @@ a {
    font-family:"Space Mono", monospace;
    font-style:normal;
    margin-top:4vmax;
-   margin-left:50vmax;
+   margin-left:55vmax;
    margin-right:5vmax;
    text-align:justify;
+   font-size:2.4vmax;
 }
 .brd {
    color:white;
