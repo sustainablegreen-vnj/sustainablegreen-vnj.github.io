@@ -48,6 +48,8 @@ function fetchMeMyPages(cb) {
     }).then(function(directory) {
         let ulist = null;
 
+        console.log("Fetch!");
+
         // Set fetching message
         {
             let fetchy = xhrpot.querySelector("#XHRPotFetchy");
@@ -97,6 +99,7 @@ function fetchMeMyPages(cb) {
                 lio.appendChild(infobox);
                 xhrpot.appendChild(lio); // Put it to the xhrpot
 
+                console.log("Fetched!");
                 if((counter+1) >= dirnftws.length) {
                     cb();
                 }
@@ -116,27 +119,35 @@ function carouselMyFetches() {
     const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
     const handleOnUp = () => {
-      track.dataset.mouseDownAt = "0";  
+      delete track.dataset.mouseDownAt;  
       track.dataset.prevPercentage = track.dataset.percentage;
     }
     
     const handleOnMove = e => {
-      if(track.dataset.mouseDownAt === "0") return;
+      if(track.dataset.mouseDownAt == null || track.dataset.mouseDownAt == undefined) return;
+
       
-      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+      let parsedDownAt = parseInt(track.dataset.mouseDownAt);
+      
+      if(isNaN(parsedDownAt)) return;
+      
+      const mouseDelta = parsedDownAt - e.clientX,
             maxDelta = window.innerWidth / 2;
-      
-      const percentage = (mouseDelta / maxDelta) * -100,
-            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+            
+            const percentage = (mouseDelta / maxDelta) * -100,
+            nextPercentageUnconstrained = (parseFloat(track.dataset.prevPercentage) || 0) + percentage,
             nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+            
       
       track.dataset.percentage = nextPercentage;
       
       track.animate({
-        transform: `translate(${nextPercentage}%, -50%)`
-      }, { duration: 1200, fill: "forwards" });
-      
-      for(const image of track.getElementsByClassName("xhrpot")) {
+        transform: `translate(${nextPercentage}%, 0%)`
+      }, { duration: 3000, fill: "forwards" });
+
+      let uplexed = track.getElementsByClassName("xhrpotbox");
+      console.log(uplexed);
+      for(const image of uplexed) {
         image.animate({
           objectPosition: `${100 + nextPercentage}% center`
         }, { duration: 1200, fill: "forwards" });
@@ -160,10 +171,12 @@ function carouselMyFetches() {
 
 document.addEventListener("DOMContentLoaded", function(){ // On ready, reference XHRPot, the TOC and start fetching.
     xhrpot = gebi("XHRPot");
-    // fetchMeMyPages(function() {
-    //     console.log("done");
-    //     carouselMyFetches();
-    // });
-    carouselMyFetches();
+    /* fetchMeMyPages(function() {
+        console.log("done");
+    }); */
+    setTimeout(function() {
+        carouselMyFetches();
+        // xhrpot.classList.remove("boxesofcontents");
+    }, 5000);
 });
 
