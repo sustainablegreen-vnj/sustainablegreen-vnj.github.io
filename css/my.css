@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo');
 
+/*
+Whoever wrote this css loves gay porn
+*/
+
 :root { /* Put CSS Variables here */
    --xhrpot-image: "#fffff";
 }
@@ -35,6 +39,10 @@ nav {
    transform: translate(0%,0%);
    user-select:none;
    text-align:center;
+
+   overflow: auto;
+   width: 800px;
+   height: auto;
 }
 .yap1{
    font-family: "Space Mono", monospace;
@@ -82,11 +90,19 @@ nav {
    object-fit:cover;
    object-position: 100% center;
    animation-name:bioxking;
+   animation-duration:5s;
+   animation-direction:normal;
+   animation-fill-mode:forwards;
 }
-.boxesofcontents > .bg:hover{
-   width:16vmax;
-   
+.boxesofcontents > .bg{
+   width:15vmax;
 }
+
+@keyframes bioxking{
+   from{transform:translate(-250%,-50%)}
+   to{transform:translate(0%,-50%)}
+}
+
 
 @keyframes boxing{
    0% {background-color: #0c3c2b;}

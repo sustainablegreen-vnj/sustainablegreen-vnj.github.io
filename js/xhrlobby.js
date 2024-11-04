@@ -46,11 +46,14 @@ function fetchMeMyPages(cb) {
     fetch(directoryFile).then(function(response) { // Covert to text
         return response.text(); 
     }).then(function(directory) {
+        let ulist = null;
 
         // Set fetching message
         {
             let fetchy = xhrpot.querySelector("#XHRPotFetchy");
             fetchy.remove();
+            ulist = document.createElement("ul");
+            xhrpot.appendChild(ulist);
         }
         const fmsg = document.createElement("p");
         fmsg.textContent = "Fetching the articles now...";
@@ -78,7 +81,9 @@ function fetchMeMyPages(cb) {
                 }
 
                 const metai = fetchMyPagesData(text); // Fetch page info
-                
+
+                const lio = document.createElement("li");
+
                 const infobox = document.createElement("img"); // Create xhrpot box
                 infobox.src = metai.Image;
                 infobox.alt = `${metai.Title}: ${metai.Description}`;
@@ -89,7 +94,8 @@ function fetchMeMyPages(cb) {
                 infobox.classList.add("xhrpotbox");
                 infobox.classList.add("bg");
 
-                xhrpot.appendChild(infobox); // Put it to the xhrpo
+                lio.appendChild(infobox);
+                xhrpot.appendChild(lio); // Put it to the xhrpot
 
                 if((counter+1) >= dirnftws.length) {
                     cb();
@@ -105,27 +111,59 @@ function fetchMeMyPages(cb) {
 }
 
 
-// let mx = null, my = null; // Mouse position
 function carouselMyFetches() {
-    var width = document.documentElement.scrollWidth;
-    function scrollPlexer(event){
-        var x = event.clientX;
-        var xPercentage = x/screen.width;
-        window.focus();
-        window.scrollTo(xPercentage*width, 0);
-        console.log(xPercentage*width);
-    }
+    let track = xhrpot;
+    const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
-    window.history.scrollRestoration = 'manual'
-    window.onmousemove = scrollPlexer;
+    const handleOnUp = () => {
+      track.dataset.mouseDownAt = "0";  
+      track.dataset.prevPercentage = track.dataset.percentage;
+    }
+    
+    const handleOnMove = e => {
+      if(track.dataset.mouseDownAt === "0") return;
+      
+      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+            maxDelta = window.innerWidth / 2;
+      
+      const percentage = (mouseDelta / maxDelta) * -100,
+            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+            nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+      
+      track.dataset.percentage = nextPercentage;
+      
+      track.animate({
+        transform: `translate(${nextPercentage}%, -50%)`
+      }, { duration: 1200, fill: "forwards" });
+      
+      for(const image of track.getElementsByClassName("xhrpot")) {
+        image.animate({
+          objectPosition: `${100 + nextPercentage}% center`
+        }, { duration: 1200, fill: "forwards" });
+      }
+    }
+    
+    /* -- Had to add extra lines for touch events -- */
+    
+    window.onmousedown = e => handleOnDown(e);
+    
+    window.ontouchstart = e => handleOnDown(e.touches[0]);
+    
+    window.onmouseup = e => handleOnUp(e);
+    
+    window.ontouchend = e => handleOnUp(e.touches[0]);
+    
+    window.onmousemove = e => handleOnMove(e);
+    
+    window.ontouchmove = e => handleOnMove(e.touches[0]);
 }
 
 document.addEventListener("DOMContentLoaded", function(){ // On ready, reference XHRPot, the TOC and start fetching.
     xhrpot = gebi("XHRPot");
-    fetchMeMyPages(function() {
-        console.log("done");
-        carouselMyFetches();
-    });
-    
+    // fetchMeMyPages(function() {
+    //     console.log("done");
+    //     carouselMyFetches();
+    // });
+    carouselMyFetches();
 });
 
