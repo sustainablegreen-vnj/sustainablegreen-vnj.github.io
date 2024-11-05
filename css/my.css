@@ -39,7 +39,6 @@ nav {
    transform: translate(0%,0%);
    user-select:none;
    text-align:center;
-   animation:bioxking;
 }
 .yap1{
    font-family: "Space Mono", monospace;
@@ -77,8 +76,9 @@ nav {
    overflow:hidden;
    display:flex;
    animation-name:bioxking;
-   animation-duration:6s;
+   animation-duration:3s;
    transform:translate(0%,-50%);
+   animation-timing-function:cubic-bezier(0.6, 0.1, 0.3, 0);
 }
 
 .boxesofcontents > .bg{
@@ -187,7 +187,7 @@ nav {
    color:white;
    height:3vh;
    margin-top:8vh;
-   margin-left:50vw;
+   margin-left:5vw;
    float:center;
    position:fixed;
    text-align:center;
