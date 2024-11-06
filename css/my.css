@@ -1,35 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo');
 
 /*
-Whoever wrote this css loves gay porn
+as the writer of this css, if the code works don't touch it
 */
 
 :root { /* Put CSS Variables here */
    --xhrpot-image: "#fffff";
 }
-
-
 .container-fluid {
    background-color: green;
    opacity: 75%;
 }
-
-nav {
-    background: green;
-}
-
 .navbar-brand {
    opacity:100%;
    font-size: 30px;
 }
-
 .box1{
    width:20px;
    border: 15px solid black;
    padding:20px;
    margin:20px;
 }
-
 .boxesofcontents {
    display:flex;
    gap:2vmax;
@@ -39,6 +30,7 @@ nav {
    transform: translate(0%,0%);
    user-select:none;
    text-align:center;
+   background-color:black;
 }
 .yap1{
    font-family: "Space Mono", monospace;
@@ -49,8 +41,6 @@ nav {
 }
 .xhrpotbox:hover{
    background-color:darkgreen;
-   /*animation-name: boxing;
-   animation-duration: 4s;*/
    animation-iteration-count:infinite;
    position:center;
    font-family: "Space Mono", monospace;
@@ -60,7 +50,6 @@ nav {
 }
 .xhrpotbox{
    gap:2vmax;
-   word-wrap: break-word;
    text-align:center;
    float:left;
    top:50%;
@@ -72,35 +61,26 @@ nav {
    font-style: normal;
    font-size:15px;
    object-fit:cover;
-   object-position:center;
+   object-position: 100% center;
    overflow:hidden;
    display:flex;
+}
+.xhrpotboxanim {
    animation-name:bioxking;
    animation-duration:3s;
    transform:translate(0%,-50%);
    animation-timing-function:cubic-bezier(0.6, 0.1, 0.3, 0);
 }
-
 .boxesofcontents > .bg{
    width:15vmax;
    height: 15vmax;
    object-fit:cover;
    object-position: 100% center;
-   animation-direction:normal;
-   animation-fill-mode:forwards;
-   
-   
 }
-.boxesofcontents > .bg:hover{
-   width:15vmax;
-   animation:none;
-}
-
 @keyframes bioxking{
    from{transform:translate(-800%,-50%)}
    to{transform:translate(0%,-50%)}
 }
-
 .boxesofdecoration{
    gap:2vmax;
    word-wrap: break-word;
@@ -121,7 +101,6 @@ nav {
    animation-duration:6s;
    transform:translate(-100%,-100%);
 }
-
 .decorbox{
    animation:none;
    width:5vmax;
@@ -131,7 +110,6 @@ nav {
    animation-direction:normal;
    animation-fill-mode:normal;
 }
-
 @keyframes boxing{
    0% {background-color: #0c3c2b;}
    16.6% {background-color: #1B4332;}
@@ -140,10 +118,7 @@ nav {
    66.6% {background-color: #2D6A4F;}
    80%{background-color: #1B4332;}
    100% {background-color: #0c3c2b;}
-
 }
-
-
 /*space mono regular */
 .smr { 
    font-family: "Space Mono", monospace;
@@ -168,7 +143,6 @@ nav {
    font-weight: 700;
    font-style: italic;
  }
- 
  .left header {
    font-size:35px;
    text-align:center;
@@ -181,25 +155,22 @@ nav {
    float:center;
    text-align:center;
  }
- 
-
- .navbar1{
+.navbar1{
    color:white;
    height:3vh;
    margin-top:8vh;
    margin-left:5vw;
-   float:center;
    position:fixed;
-   text-align:center;
    justify-content:center;
    transform:translate(-50%,0%);
    font-family: "Space Mono", monospace;
    font-weight: 700;
    font-style: underline;
-   display:block;
+   display:flex;
    font-size:2vmax;
    background-color:black;
    padding:2px;
+   z-index: 10;
  }
 
  .breaker{
@@ -233,13 +204,13 @@ a {
 }
 
  .dram2{
-   
-   font-family: "Cardo", serif;
-   font-weight: 400;
+   margin-top:10vh;
+   font-family: "Space Mono", monospace;
+   font-weight: 1000;
    font-style: normal;
    width:100vw;
    text-align:center;
-   font-size:4vmax;
+   font-size:3.23vmax;
    overflow: hidden;
    left:50%; right:50%;
    border-right: .15em solid green;
@@ -248,9 +219,9 @@ a {
    letter-spacing:0.15em;
    opacity:0;
    animation:
-      fadeIn2 2.5 forwards,
+      fadeIn2 2.5s forwards,
       typing2 2.5s steps(40,end),
-      blink-caret2 0.75s step-end 5;
+      blink-caret2 0.75s step-end 45;
 }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -262,11 +233,11 @@ a {
       opacity: 1;
    }
    99%{
-      width:70%;
+      width:80%;
       opacity:1;
    }
    100% {
-      width:70%;
+      width:80%;
       opacity:1;
    }
 }
@@ -289,7 +260,7 @@ a {
    letter-spacing:0.15em;
    background-color:black;
    color:white;
-   padding-top:50vh;
+   padding-top:5vh;
    padding-bottom:50vh;
    font-size:4vmin;
  }
@@ -348,10 +319,10 @@ a {
    font-family:"Space Mono", monospace;
    font-style:normal;
    margin-top:4vmax;
-   margin-left:55vmax;
-   margin-right:5vmax;
+   margin-left:45vw;
+   margin-right:16vw;
    text-align:justify;
-   font-size:2.4vmax;
+   font-size:1.8vmax;
 }
 .brd {
    color:white;
@@ -360,6 +331,19 @@ a {
    animation:appear 3s forwards;
    animation-delay:2.5s;
 
+}
+.introyap{
+   color:white;
+   justify-content:justify;
+   margin-left:15vw;
+   margin-right:15vw;
+   text-align:justify;
+   font-family:"Space Mono", monospace;
+   font-size:1.8vmax;
+   font-weight:700;
+   animation: appear 3s forwards;
+   animation-delay:2.5s;
+   opacity:0;
 }
 @keyframes appear {
    0% {opacity:0}
@@ -370,4 +354,29 @@ a {
 .sources{
    float:center;
    margin-left:25vmax;
+}
+
+.zigma{
+   overflow:hidden;
+   background-color:#333;
+}
+
+
+
+.middleyap3r{
+   background-color:black;
+}
+.aeng{
+   z-index:10; 
+   width:20vmax;
+   justify-content:justify;
+   text-align:justify;
+   margin-left:15vw;
+   margin-right:15vw;
+   display:flex;
+
+}
+
+.yap3r1{
+   margin-left:2vmax;
 }

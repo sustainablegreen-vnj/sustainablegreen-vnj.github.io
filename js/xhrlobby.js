@@ -12,6 +12,7 @@ let xhrpot = null;
 // With my 2015 mac, guess whats next in history.
 // (Clue: it involves *WHIRING* pc fans)
 // All three open makes it hard for me to save on the mac.
+// the creator of this is gay
 
 function fetchMyPagesData(pagesrc) {
     const domparsw = new DOMParser();
@@ -119,39 +120,38 @@ function carouselMyFetches() {
     const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
     const handleOnUp = () => {
-      delete track.dataset.mouseDownAt;  
-      track.dataset.prevPercentage = track.dataset.percentage;
+        track.dataset.mouseDownAt = "0";  
+        track.dataset.prevPercentage = track.dataset.percentage;
     }
     
     const handleOnMove = e => {
-      if(track.dataset.mouseDownAt == null || track.dataset.mouseDownAt == undefined) return;
+        if(track.dataset.mouseDownAt === "0" || track.dataset.mouseDownAt === null || track.dataset.mouseDownAt === undefined) return;
 
-      
-      let parsedDownAt = parseInt(track.dataset.mouseDownAt);
-      
-      if(isNaN(parsedDownAt)) return;
-      
-      const mouseDelta = parsedDownAt - e.clientX,
+        
+        let parsedDownAt = parseFloat(track.dataset.mouseDownAt);
+        
+        if(isNaN(parsedDownAt)) return;
+        
+        const mouseDelta = parsedDownAt - e.clientX,
             maxDelta = window.innerWidth / 2;
-            
-            const percentage = (mouseDelta / maxDelta) * -100,
+
+        const percentage = (mouseDelta / maxDelta) * -100,
             nextPercentageUnconstrained = (parseFloat(track.dataset.prevPercentage) || 0) + percentage,
             nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-            
-      
-      track.dataset.percentage = nextPercentage;
-      
-      track.animate({
-        transform: `translate(${nextPercentage}%, 0%)`
-      }, { duration: 3000, fill: "forwards" });
 
-      let uplexed = track.getElementsByClassName("xhrpotbox");
-      console.log(uplexed);
-      for(const image of uplexed) {
-        image.animate({
-          objectPosition: `${100 + nextPercentage}% center`
-        }, { duration: 1200, fill: "forwards" });
-      }
+        
+        track.dataset.percentage = nextPercentage;
+        
+        track.animate({
+            transform: `translate(${nextPercentage}%, 0%)`
+        }, { duration: 3000, fill: "forwards" });
+
+        let uplexed = track.getElementsByClassName("xhrpotbox");
+        for(const image of uplexed) {
+            image.animate({
+                objectPosition: `${100 + nextPercentage}% center`
+            }, { duration: 1200, fill: "forwards" });
+        }
     }
     
     /* -- Had to add extra lines for touch events -- */
@@ -177,6 +177,10 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
     setTimeout(function() {
         carouselMyFetches();
         // xhrpot.classList.remove("boxesofcontents");
-    }, 5000);
+        for(const a of xhrpot.getElementsByTagName("a")) {
+            a.classList.remove("xhrpotboxanim");
+            a.style.transform = "translate(0%,-50%)";
+        }
+    }, 3000);
 });
 
