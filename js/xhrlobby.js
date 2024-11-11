@@ -170,6 +170,8 @@ function carouselMyFetches() {
 }
 
 document.addEventListener("DOMContentLoaded", function(){ // On ready, reference XHRPot, the TOC and start fetching.
+    document.body.style.pointerEvents = "none";
+
     xhrpot = gebi("XHRPot");
     /* fetchMeMyPages(function() {
         console.log("done");
@@ -181,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
             a.classList.remove("xhrpotboxanim");
             a.style.transform = "translate(0%,-50%)";
         }
+        document.body.style.pointerEvents = "initial";
     }, 3000);
 });
 

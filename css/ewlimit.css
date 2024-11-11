@@ -1,0 +1,73 @@
+.dram{
+   color:white;
+   font-family:"Space Mono", monospace;
+   margin-top:10vh;
+   font-weight: 1000;
+   font-style: normal;
+   width:100vw;
+   text-align:center;
+   font-size:5vmax;
+   overflow: hidden;
+   left:50%; right:50%;
+   border-right: .15em solid green;
+   white-space: nowrap;
+   margin: 0 auto;
+   letter-spacing:0.15em;
+   opacity:0;
+   animation:
+      fadeIn2 2.5s forwards,
+      typing2 2.5s steps(40,end),
+      blink-caret2 0.75s step-end 45;
+}
+@keyframes fadeIn2{
+   0% {opacity:0;}
+   100% {opacity:1; border-right:black;}
+}
+@keyframes typing2 {
+   0% {
+      width: 0%;
+      opacity: 1;
+   }
+   99%{
+      width:80%;
+      opacity:1;
+   }
+   100% {
+      width:80%;
+      opacity:1;
+   }
+}
+@keyframes blink-caret2 {
+   from, to {border-color:transparent;}
+   50% {border-color:green;}
+ }
+
+body {
+   background-color:black;
+   color:white;
+}
+
+.zigma{
+   position:fixed;
+   margin-left:2vmax;
+   overflow:hidden;
+   z-index:10;
+}
+
+.navbar1{
+   color:white;
+   height:3vh;
+   margin-top:8vh;
+   margin-left:5vw;
+   position:fixed;
+   justify-content:center;
+   transform:translate(-100%,-170%);
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
+   font-style: underline;
+   display:flex;
+   font-size:3vmax;
+   background-color:black;
+   padding:2px;
+   z-index: 10;
+}

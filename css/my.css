@@ -155,6 +155,7 @@ as the writer of this css, if the code works don't touch it
    float:center;
    text-align:center;
  }
+
 .navbar1{
    color:white;
    height:3vh;
@@ -330,6 +331,8 @@ a {
    opacity:0;
    animation:appear 3s forwards;
    animation-delay:2.5s;
+   display:flex;
+   flex-wrap:wrap;
 
 }
 .introyap{
@@ -360,9 +363,6 @@ a {
    overflow:hidden;
    background-color:#333;
 }
-
-
-
 .middleyap3r{
    background-color:black;
 }
@@ -372,11 +372,32 @@ a {
    justify-content:justify;
    text-align:justify;
    margin-left:15vw;
-   margin-right:15vw;
-   display:flex;
+   border: white solid 5px;
+   padding:0.2vmax;
 
 }
 
 .yap3r1{
    margin-left:2vmax;
+}
+
+.aeng1{
+   width:20vmax;
+   margin-left:4vmax;
+   border: white solid 5px;
+   padding:0.2vmax;
+}
+.aeng2{
+   width:20vmax;
+   margin-left:4vmax;
+   border: white solid 5px;
+   padding:0.2vmax;
+}
+
+.donate{
+   color:white;
+   margin-left:15vw;
+   width:45vmax;
+   font-family:'Space Mono', monospace;
+   text-align:justify;
 }
