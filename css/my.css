@@ -368,13 +368,15 @@ a {
 }
 .aeng{
    z-index:10; 
-   width:20vmax;
+   width:45vmax;
    justify-content:justify;
    text-align:justify;
    margin-left:15vw;
    border: white solid 5px;
    padding:0.2vmax;
-
+   cursor:pointer;
+   display:flex;
+   margin-right:-10vmax;
 }
 
 .yap3r1{
@@ -382,16 +384,24 @@ a {
 }
 
 .aeng1{
-   width:20vmax;
-   margin-left:4vmax;
+   width:45vmax;
+   margin-left:2vmax;
    border: white solid 5px;
    padding:0.2vmax;
+   cursor:pointer;
+   display:flex;
+   justify-content:justify;
+   margin-left:15vw;
 }
 .aeng2{
    width:20vmax;
-   margin-left:4vmax;
+   margin-left:2vmax;
    border: white solid 5px;
    padding:0.2vmax;
+   cursor:pointer;
+   display:flex;
+   justify-content:justify;
+   margin-left:15vw;
 }
 
 .donate{
@@ -400,4 +410,29 @@ a {
    width:45vmax;
    font-family:'Space Mono', monospace;
    text-align:justify;
+   animation:appear 3s forwards;
+   opacity:0;
+   animation-delay: 7s;
+   font-size:2vmax;
 }
+
+details{
+   max-height:100vmax;
+   margin-bottom:0.5vmax;
+   border: solid 1px black;
+   overflow:hidden;
+   box-shadow: 0 0.1vmax 1vmax 0.5vmax rgba(255,255,255);
+   transition: max-height 400ms ease-out;
+   animation:appear 3s forwards;
+   opacity:0;
+   animation-delay:5s;
+   font-size:2vmax;
+   display:flex;
+}
+
+.more{
+   color:white;
+}
+.r3s1{
+}
+
