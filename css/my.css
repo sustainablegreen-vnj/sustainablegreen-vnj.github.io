@@ -433,6 +433,32 @@ details{
 .more{
    color:white;
 }
-.r3s1{
+
+#ReduceDialog{
+   width:30%;
+   background-color:black;
+   color:white;
+   justify-content:justify;
+   text-align:justify;
 }
 
+#ReuseDialog{
+   width:30%;
+   background-color:black;
+   color:white;
+   justify-content:justify;
+   text-align:justify;
+}
+
+#RecycleDialog{
+   width:30%;
+   background-color:black;
+   color:white;
+   justify-content:justify;
+   text-align:justify;
+}
+
+.brd{
+   margin-left:15%;
+   width:20%;
+}

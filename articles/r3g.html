@@ -35,51 +35,55 @@
 
         
         <section class="brd">
-            <dialog>
-                <button>Close</button>
-                <p class="r3s">&nbsp; &nbsp;&nbsp;&nbsp;The first R, Reduce is all about creating less waste. A few
-                    examples can be to only buy what you need, to choose products with less packaging, buying
-                    items in bulk, look for items you can reuse, and replace usage of single use plastic bags 
-                    with a cloth bag. </p>
+            <dialog id="ReduceDialog">
+                <form>
+                    <label>Reduce</label>
+                    <p class="r3s">
+                      <label>
+                        &nbsp; &nbsp;&nbsp;&nbsp;The first R, Reduce is all about creating less waste. A few
+                        examples can be to only buy what you need, to choose products with less packaging, buying
+                        items in bulk, look for items you can reuse, and replace usage of single use plastic bags 
+                        with a cloth bag. 
+                      </label>
+                    </p>
+                    <div>
+                      <button value="default" formmethod="dialog">Close</button>
+                    </div>
+                  </form>
             </dialog>
-            <button>Reduce</button>
-            <!--NOAH I NEED YOUR HELP ON THE JAVASCRIPT FOR ABOVE AND BELOW THIS (DIALOG)-->
+            <button id="openReduce">Reduce</button>
 
-            <dialog>
-                <button>Close</button>
-                <p class="r3s1">&nbsp;&nbsp;&nbsp;&nbsp;The second R, Reuse is how you can use certain items multiple times before
-                    throwing it away. A few examples can be to repurpose jars and containers, and to donate old clothing
-                    and furniture instead of throwing them away. </p>
+            <dialog id="ReuseDialog">
+                <form>
+                    <label>Reduce</label>
+                    <p class="r3s1">
+                      <label>&nbsp;&nbsp;&nbsp;&nbsp;The second R, Reuse is how you can use certain items multiple times before
+                        throwing it away. A few examples can be to repurpose jars and containers, and to donate old clothing
+                        and furniture instead of throwing them away. 
+                      </label>
+                    </p>
+                    <div>
+                      <button value="default" formmethod="dialog">Close</button>
+                    </div>
+                  </form>
             </dialog>
-            <button>Reuse</button>
-            <dialog>
-                <button>Close</button>
-                <p class="r3s2">
-                    &nbsp;&nbsp;&nbsp;&nbsp;The third and last R, Recycle is how you can repurpose an item to give it 
-                    a new purpose. A few examples can be to create a flower pot from plastic bottles that have been 
-                    thrown away.</p>
+            <button id="openReuse">Reuse</button>
+
+            <dialog id="RecycleDialog">
+                <form>
+                    <label>Reduce</label>
+                    <p class="r3s3">
+                      <label>&nbsp;&nbsp;&nbsp;&nbsp;The third and last R, Recycle is how you can repurpose an item to give it 
+                        a new purpose. A few examples can be to create a flower pot from plastic bottles that have been 
+                        thrown away.
+                      </label>
+                    </p>
+                    <div>
+                      <button value="default" formmethod="dialog">Close</button>
+                    </div>
+                  </form>
             </dialog>
-            <button>Recycle</button>
-            <details open class="aeng">
-                <summary class="reduce">Reduce</summary> 
-                                <p class="r3s">&nbsp; &nbsp;&nbsp;&nbsp;The first R, Reduce is all about creating less waste. A few
-                                examples can be to only buy what you need, to choose products with less packaging, buying
-                                items in bulk, look for items you can reuse, and replace usage of single use plastic bags 
-                                with a cloth bag. </p>
-            </details>
-            <details class="aeng1">
-                <summary class="reuse">Reuse</summary>
-                            <p class="r3s1">&nbsp;&nbsp;&nbsp;&nbsp;The second R, Reuse is how you can use certain items multiple times before
-                            throwing it away. A few examples can be to repurpose jars and containers, and to donate old clothing
-                            and furniture instead of throwing them away. </p>
-            </details>
-            <details class="aeng2">
-                <summary class="recycle">Recycle</summary>
-                <p class="r3s2">
-                            &nbsp;&nbsp;&nbsp;&nbsp;The third and last R, Recycle is how you can repurpose an item to give it 
-                            a new purpose. A few examples can be to create a flower pot from plastic bottles that have been 
-                            thrown away.</p>
-            </details>
+            <button id="openRecycle">Recycle</button>
         </section>
 
 
@@ -131,8 +135,6 @@
             </footer>
 
 
-        <script>
-            let sid = 0; // scrollLater id
-        </script>
+        <script src="/js/r3gdialogs.js"></script>
     </body>
 </html>
