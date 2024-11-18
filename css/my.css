@@ -67,9 +67,9 @@ as the writer of this css, if the code works don't touch it
 }
 .xhrpotboxanim {
    animation-name:bioxking;
-   animation-duration:3s;
+   animation-duration:2.5s;
    transform:translate(0%,-50%);
-   animation-timing-function:cubic-bezier(0.6, 0.1, 0.3, 0);
+   animation-timing-function:cubic-bezier(0.6, 0.1, 0.2, 0.15);
 }
 .boxesofcontents > .bg{
    width:15vmax;
@@ -172,6 +172,7 @@ as the writer of this css, if the code works don't touch it
    background-color:black;
    padding:2px;
    z-index: 10;
+   text-decoration:underline;
  }
 
  .breaker{
@@ -362,6 +363,8 @@ a {
 .zigma{
    overflow:hidden;
    background-color:#333;
+   text-decoration:underline;
+   font-style:underline;
 }
 .middleyap3r{
    background-color:black;
@@ -462,7 +465,7 @@ details{
 
 .brd{
    margin-left:15%;
-   width:50%;
+   width:80%;
    font-family:"Space Mono", monospace;
    height:60%;
 }
@@ -476,6 +479,7 @@ details{
    cursor:pointer;
    font-family:"Space Mono",monospace;
    text-decoration:underline;
+   font-weight:700;
 }
 
 #openReuse{
@@ -488,6 +492,7 @@ details{
    font-family:"Space Mono",monospace;
    margin-left:5vmax;
    text-decoration:underline;
+   font-weight:700;
 }
 
 #openRecycle{
@@ -510,5 +515,6 @@ details{
    width:45vmax;
    animation: appear 3s forwards;
    font-weight:700;
-   animation-delay:5s;
+   opacity:0;
+   animation-delay:7s;
 }
