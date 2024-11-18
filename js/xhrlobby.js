@@ -180,10 +180,37 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
         carouselMyFetches();
         // xhrpot.classList.remove("boxesofcontents");
         for(const a of xhrpot.getElementsByTagName("a")) {
-            a.classList.remove("xhrpotboxanim");
+            a.classList.remove("xhrpotboxanim1");
             a.style.transform = "translate(0%,-50%)";
         }
         document.body.style.pointerEvents = "initial";
-    }, 3000);
+    }, 2620);
+    setTimeout(function() {
+        carouselMyFetches();
+        //help.
+        for(const b of xhrpot.getElementsByTagName("a")){
+            b.classList.remove("xhrpotboxanim2");
+            b.style.transform = "translate(0%,-50%)";
+        }
+        document.body.style.pointerEvents ="initial";
+    },3020);
+    setTimeout(function(){
+        carouselMyFetches();
+        //help.
+        for(const c of xhrpot.getElementsByTagName("a")){
+            c.classList.remove("xhrpotboxanim3");
+            c.style.transform = "translate(0%,-50%)";
+        }
+        document.body.style.pointerEvents ="initial";
+    },3420);
+    setTimeout(function(){
+        carouselMyFetches();
+        //help.
+        for(const d of xhrpot.getElementsByTagName("a")){
+            d.classList.remove("xhrpotboxanim4");
+            d.style.transform = "translate(0%,-50%)";
+        }
+        document.body.style.pointerEvents ="initial";
+    },3820);
 });
 

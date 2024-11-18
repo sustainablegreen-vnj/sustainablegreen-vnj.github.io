@@ -30,7 +30,6 @@ as the writer of this css, if the code works don't touch it
    transform: translate(0%,0%);
    user-select:none;
    text-align:center;
-   background-color:black;
 }
 .yap1{
    font-family: "Space Mono", monospace;
@@ -65,18 +64,53 @@ as the writer of this css, if the code works don't touch it
    overflow:hidden;
    display:flex;
 }
-.xhrpotboxanim {
-   animation-name:bioxking;
+.xhrpotboxanim1 {
+   opacity:0;
+   animation-name:bioxking, boxappear;
    animation-duration:2.5s;
    transform:translate(0%,-50%);
-   animation-timing-function:cubic-bezier(0.6, 0.1, 0.2, 0.15);
+   animation-timing-function:cubic-bezier(.71,1.48,.34,.86);
 }
+.xhrpotboxanim2 {
+   opacity:0;
+   animation-name:bioxking,boxappear;
+   animation-duration:2.5s;
+   transform:translate(0%,-50%);
+   animation-timing-function:cubic-bezier(.71,1.48,.34,.86);
+   animation-delay:0.4s;
+}
+.xhrpotboxanim3 {
+   opacity:0;
+   animation-name:bioxking, boxappear;
+   animation-duration:2.5s;
+   transform:translate(0%,-50%);
+   animation-timing-function:cubic-bezier(.71,1.48,.34,.86);
+   animation-delay:0.8s;
+}
+.xhrpotboxanim4 {
+   opacity:0;
+   animation-name:bioxking, boxappear;
+   animation-duration:2.5s;
+   transform:translate(0%,-50%);
+   animation-timing-function:cubic-bezier(.71,1.48,.34,.86);
+   animation-delay:1.2s;
+}
+@keyframes boxappear{
+   0%{opacity:0;}
+   99%{opacity:1;}
+   100%{opacity:1;}
+}
+
+
 .boxesofcontents > .bg{
    width:15vmax;
    height: 15vmax;
    object-fit:cover;
    object-position: 100% center;
 }
+
+
+
 @keyframes bioxking{
    from{transform:translate(-800%,-50%)}
    to{transform:translate(0%,-50%)}
@@ -169,7 +203,6 @@ as the writer of this css, if the code works don't touch it
    font-style: underline;
    display:flex;
    font-size:2vmax;
-   background-color:black;
    padding:2px;
    z-index: 10;
    text-decoration:underline;
@@ -194,7 +227,6 @@ as the writer of this css, if the code works don't touch it
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
-   background-color:black;
    color:white;
  }
 
@@ -222,8 +254,8 @@ a {
    opacity:0;
    animation:
       fadeIn2 2.5s forwards,
-      typing2 2.5s steps(40,end),
-      blink-caret2 0.75s step-end 45;
+      typing2 2.5s steps(35,end),
+      blink-caret2 0.5s step-end infinite;
 }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -260,7 +292,6 @@ a {
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
-   background-color:black;
    color:white;
    padding-top:5vh;
    padding-bottom:50vh;
@@ -276,9 +307,17 @@ a {
  body{
    margin:0;
    padding:0;
+   background-image:url("https://images.unsplash.com/photo-1728986554951-801b2faf66c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-repeat:no-repeat;
+   background-attachment:fixed;
+   background-size: cover;
+}
+
+.bgimage{
+   position:absolute;
+   width:100%;
    
-   background-color:black;
- }
+}
 
  #XHRPotFetchy{
    color:white;
@@ -313,7 +352,7 @@ a {
    float:center;
    text-align:center;
    font-size:5vmax;
-   font-family:"Comic Sans ms", monospace;
+   font-family:"Space Mono", monospace;
 }
 
 .yap3r{
@@ -357,18 +396,20 @@ a {
 
 .sources{
    float:center;
-   margin-left:25vmax;
+   margin-left:15vmax;
+   animation: appear 3s forwards;
+   animation-delay:7s;
+   opacity:0;
+   color:lightblue;
 }
 
 .zigma{
    overflow:hidden;
-   background-color:#333;
+   
    text-decoration:underline;
    font-style:underline;
 }
-.middleyap3r{
-   background-color:black;
-}
+
 .aeng{
    z-index:10; 
    width:45vmax;
@@ -454,8 +495,8 @@ details{
 }
 
 #RecycleDialog{
-   height:30%;
-   width:15%;
+   height:50%;
+   width:25%;
    background-color:black;
    color:white;
    justify-content:justify;
@@ -472,8 +513,8 @@ details{
 
 #openReduce{
    font-size:3vmax;
+   background-color:transparent; 
    color:white;
-   background-color:black;
    border:none;   
    display:flex;
    cursor:pointer;
@@ -484,7 +525,7 @@ details{
 
 #openReuse{
    color:white;
-   background-color:black;
+   background-color:transparent;
    border:none;
    font-size:3vmax;
    display:flex;
@@ -497,7 +538,7 @@ details{
 
 #openRecycle{
    color:white;
-   background-color:black;
+   background-color:transparent;
    border:none;
    font-size:3vmax;
    cursor:pointer;
@@ -514,7 +555,6 @@ details{
    margin-left:16vw;
    width:45vmax;
    animation: appear 3s forwards;
-   font-weight:700;
    opacity:0;
    animation-delay:7s;
 }

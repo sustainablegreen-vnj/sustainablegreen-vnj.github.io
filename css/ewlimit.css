@@ -2,22 +2,23 @@
    color:white;
    font-family:"Space Mono", monospace;
    margin-top:10vh;
-   font-weight: 1000;
+   font-weight: 700;
    font-style: normal;
    width:100vw;
    text-align:center;
-   font-size:5vmax;
+   font-size:3vmax;
    overflow: hidden;
    left:50%; right:50%;
    border-right: .15em solid green;
    white-space: nowrap;
    margin: 0 auto;
-   letter-spacing:0.15em;
+   letter-spacing:0.1em;
    opacity:0;
    animation:
       fadeIn2 2.5s forwards,
       typing2 2.5s steps(40,end),
       blink-caret2 0.75s step-end 45;
+   overflow-x:hidden;
 }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -43,8 +44,13 @@
  }
 
 body {
-   background-color:black;
-   color:white;
+   margin:0;
+   padding:0;
+   background-image:url("https://images.unsplash.com/photo-1728986554951-801b2faf66c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-repeat:no-repeat;
+   background-attachment:fixed;
+   background-size: cover;
+   overflow-x:none;
 }
 
 .zigma{
@@ -61,18 +67,36 @@ body {
    margin-left:5vw;
    position:fixed;
    justify-content:center;
-   transform:translate(-100%,-170%);
+   transform:translate(-50%,0%);
    font-family: "Space Mono", monospace;
    font-weight: 700;
    font-style: underline;
    display:flex;
-   font-size:3vmax;
-   background-color:black;
+   font-size:2vmax;
    padding:2px;
    z-index: 10;
+   text-decoration:underline;
 }
 
 .more{
    color:white;
 }
 
+.yap1{
+   margin-left:12vw;
+   width:50%;
+   text-align:justify;
+   justify-content:justify;
+   color:white;
+   font-family:"Space Mono",monospace;
+   font-size:1.8vmax;
+   animation:fadingin 1s forwards;
+   opacity:0;
+   animation-delay:2.5s;
+}
+
+@keyframes fadingin{
+   0%{opacity:0}
+   99%{opacity:1}
+   100%{opacity:1}
+}
