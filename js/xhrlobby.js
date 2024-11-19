@@ -144,7 +144,7 @@ function carouselMyFetches() {
         
         track.animate({
             transform: `translate(${nextPercentage}%, 0%)`
-        }, { duration: 3000, fill: "forwards" });
+        }, { duration: 3820, fill: "forwards" });
 
         let uplexed = track.getElementsByClassName("xhrpotbox");
         for(const image of uplexed) {
