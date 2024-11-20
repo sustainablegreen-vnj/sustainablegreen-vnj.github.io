@@ -247,16 +247,15 @@ a {
    font-size:3.23vmax;
    overflow: hidden;
    left:50%; right:50%;
-   border-right: .15em solid green;
+
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
    opacity:0;
    animation:
       fadeIn2 2.5s forwards,
-      typing2 2.5s steps(35,end),
-      blink-caret2 0.5s step-end infinite;
-}
+      typing2 2.5s steps(999,end);
+ }
 @keyframes fadeIn2{
    0% {opacity:0;}
    100% {opacity:1; border-right:black;}
@@ -557,4 +556,9 @@ details{
    animation: appear 3s forwards;
    opacity:0;
    animation-delay:7s;
+}
+
+#skipanim{
+   margin-left:90vw;
+   font-size:1.6vmax;
 }
