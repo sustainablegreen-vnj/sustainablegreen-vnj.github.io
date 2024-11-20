@@ -50,7 +50,7 @@ body {
    background-repeat:no-repeat;
    background-attachment:fixed;
    background-size: cover;
-   overflow-x:none;
+   overflow-x:hidden;
 }
 
 .zigma{

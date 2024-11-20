@@ -1,4 +1,5 @@
 const gebi = document.getElementById.bind(document);
+const qselectAll = document.querySelectorAll.bind(document);
 
 function scrollTo(x, y, time=0) {
     let scrollId = 0; // Set scroll id

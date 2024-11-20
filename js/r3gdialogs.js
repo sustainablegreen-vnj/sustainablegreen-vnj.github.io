@@ -1,16 +1,24 @@
 const reduceD = gebi("ReduceDialog");
 const reuseD = gebi("ReuseDialog");
 const recycleD = gebi("RecycleDialog");
+const Ds = [reduceD, reuseD, recycleD];
 
 const reduceO = gebi("openReduce");
 const reuseO = gebi("openReuse");
 const recycleO = gebi("openRecycle");
 
-function onCloseAnyAll() {
-    console.log("close");
+function onCloseAnyAll(e) {
     document.body.style.overflow = "initial";
     window.onclick = null;
 
+    for(const d of Ds) {
+        if(!d.open) continue;
+        if(!event.target.contains(d)) return;
+    }
+
+    for(const d of Ds) {
+        d.close();
+    }
 }
 
 function onOpenAnyAll() {
@@ -25,16 +33,22 @@ function genOpener(dialog2open, others){
         }
 
         onOpenAnyAll();
+        // dialog2open.style.pointerEvents = "none";
         dialog2open.showModal();
 
         let opened = true;
-        window.onclick = function() {
+        window.onclick = function(e) {
             if(opened) {
                 opened = false;
                 return;
             }
-            console.log("click")
-            for(const d of [reduceD, reuseD, recycleD]) {
+
+            let d = document.elementFromPoint(e.clientX, e.clientY);
+            for(const d1 of d.closest("dialog")) {
+                if(d == dialog2open) return;
+            }
+
+            for(const d of Ds) {
                 d.close();
             }
         }
@@ -48,7 +62,7 @@ reuseO.onclick = genOpener(reuseD, [reduceD, recycleD]);
 recycleO.onclick = genOpener(recycleD, [reduceD, reuseD]);
 
 
-for(const d of [reduceD, reuseD, recycleD]){
+for(const d of Ds){
     d.onClose = onCloseAnyAll;
     // d.style.pointerEvents = "none";
     d.onclick = d.onClose;

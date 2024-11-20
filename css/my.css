@@ -23,7 +23,7 @@ as the writer of this css, if the code works don't touch it
 }
 .boxesofcontents {
    display:flex;
-   gap:2vmax;
+   gap:3.2vmax;
    position:absolute;
    left:50%;
    top:50%;
@@ -63,6 +63,7 @@ as the writer of this css, if the code works don't touch it
    object-position: 100% center;
    overflow:hidden;
    display:flex;
+   box-shadow:1vmax 1vmax 1vmax black;
 }
 .xhrpotboxanim1 {
    opacity:0;
@@ -223,7 +224,6 @@ as the writer of this css, if the code works don't touch it
    text-align:center;
    font-size:50px;
    overflow: hidden;
-   border-right: .15em solid black;
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
@@ -251,6 +251,8 @@ a {
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
+ }
+ .dram2-anim{
    opacity:0;
    animation:
       fadeIn2 2.5s forwards,
@@ -368,11 +370,13 @@ a {
    color:white;
    font-family:"Space Mono", monospace;
    opacity:0;
-   animation:appear 3s forwards;
-   animation-delay:2.5s;
    display:flex;
    flex-wrap:wrap;
 
+}
+.brd-anim {
+   animation:appear 2s forwards;
+   animation-delay:2.5s;
 }
 .introyap{
    color:white;
@@ -383,9 +387,11 @@ a {
    font-family:"Space Mono", monospace;
    font-size:2vmax;
    font-weight:700;
-   animation: appear 3s forwards;
-   animation-delay:2.5s;
    opacity:0;
+}
+.introyap-anim {
+   animation: appear 2s forwards;
+   animation-delay:2.5s;
 }
 @keyframes appear {
    0% {opacity:0}
@@ -396,10 +402,13 @@ a {
 .sources{
    float:center;
    margin-left:15vmax;
-   animation: appear 3s forwards;
-   animation-delay:7s;
    opacity:0;
    color:lightblue;
+}
+
+.sources-anim {
+   animation: appear 2s forwards;
+   animation-delay:7s;
 }
 
 .zigma{
@@ -453,10 +462,12 @@ a {
    width:45vmax;
    font-family:'Space Mono', monospace;
    text-align:justify;
-   animation:appear 3s forwards;
+   font-size:2vmax;
+}
+.donate-anim {
+   animation:appear 2s forwards;
    opacity:0;
    animation-delay: 7s;
-   font-size:2vmax;
 }
 
 details{
@@ -466,7 +477,7 @@ details{
    overflow:hidden;
    box-shadow: 0 0.1vmax 1vmax 0.5vmax rgba(255,255,255);
    transition: max-height 400ms ease-out;
-   animation:appear 3s forwards;
+   animation:appear 2s forwards;
    opacity:0;
    animation-delay:5s;
    font-size:2vmax;
@@ -478,7 +489,9 @@ details{
 }
 
 #ReduceDialog{
-   width:30%;
+   height:50%;
+   width:25%;
+   margin-right:14vw;
    background-color:black;
    color:white;
    justify-content:justify;
@@ -486,7 +499,9 @@ details{
 }
 
 #ReuseDialog{
-   width:30%;
+   height:50%;
+   width: 25%;
+   margin-right:14vw;
    background-color:black;
    color:white;
    justify-content:justify;
@@ -510,16 +525,23 @@ details{
    height:60%;
 }
 
+@keyframes mouse{
+   0%{cursor:auto}
+   99%{cursor:pointer}
+   100%{cursor:pointer}
+}
 #openReduce{
    font-size:3vmax;
    background-color:transparent; 
    color:white;
    border:none;   
    display:flex;
-   cursor:pointer;
+   animation: mouse 3s forwards;
+   animation-delay:2.5s;
    font-family:"Space Mono",monospace;
    text-decoration:underline;
    font-weight:700;
+   
 }
 
 #openReuse{
@@ -553,7 +575,10 @@ details{
    font-size:2vmax;
    margin-left:16vw;
    width:45vmax;
-   animation: appear 3s forwards;
+   animation: appear 2s forwards;
+}
+
+.benefits-anim {
    opacity:0;
    animation-delay:7s;
 }

@@ -173,13 +173,14 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
     document.body.style.pointerEvents = "none";
 
     xhrpot = gebi("XHRPot");
+    const ases = xhrpot.getElementsByTagName("a");
     /* fetchMeMyPages(function() {
         console.log("done");
     }); */
     setTimeout(function() {
         carouselMyFetches();
         // xhrpot.classList.remove("boxesofcontents");
-        for(const a of xhrpot.getElementsByTagName("a")) {
+        for(const a of ases) {
             a.classList.remove("xhrpotboxanim1");
             a.style.transform = "translate(0%,-50%)";
         }
@@ -188,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
     setTimeout(function() {
         carouselMyFetches();
         //help.
-        for(const b of xhrpot.getElementsByTagName("a")){
+        for(const b of ases){
             b.classList.remove("xhrpotboxanim2");
             b.style.transform = "translate(0%,-50%)";
         }
@@ -197,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
     setTimeout(function(){
         carouselMyFetches();
         //help.
-        for(const c of xhrpot.getElementsByTagName("a")){
+        for(const c of ases){
             c.classList.remove("xhrpotboxanim3");
             c.style.transform = "translate(0%,-50%)";
         }
@@ -206,11 +207,24 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
     setTimeout(function(){
         carouselMyFetches();
         //help.
-        for(const d of xhrpot.getElementsByTagName("a")){
+        for(const d of ases){
             d.classList.remove("xhrpotboxanim4");
             d.style.transform = "translate(0%,-50%)";
         }
         document.body.style.pointerEvents ="initial";
     },3820);
+
+    for(const a of ases) {
+        a.onclick = function(e) {
+            console.log("Default");
+            e.preventDefault();
+            const self = this;
+            const onDone = function(){
+                console.log("Ding");
+                window.location.href = self.href;
+            };
+            setTimeout(onDone, 1000); // Replace this with zoom done event
+        }
+    }
 });
 
