@@ -33,3 +33,7 @@ body{
    z-index: 10;
    text-decoration:underline;
 }
+
+*{
+   scrollbar-width:none;
+}

@@ -587,3 +587,7 @@ details{
    margin-left:90vw;
    font-size:1.6vmax;
 }
+
+*{
+   scrollbar-width:none;
+}
