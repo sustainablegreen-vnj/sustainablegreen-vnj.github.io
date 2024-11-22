@@ -319,8 +319,8 @@ a {
    background-position:center;
    background-repeat:no-repeat;
    background-size: cover;
-   min-height:100vh;
-   padding-top:25%;
+   min-height:110vh;
+   
 }
 
 .bgimage{
@@ -601,4 +601,9 @@ details{
    scrollbar-width:none;
 }
 
-
+.pollutionpic{
+   margin-left:65vw;
+   height:30vh;
+   width:25vw;
+   display:flex;
+}

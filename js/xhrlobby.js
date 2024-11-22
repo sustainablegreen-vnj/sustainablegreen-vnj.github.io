@@ -148,9 +148,9 @@ function carouselMyFetches() {
 
         let uplexed = track.getElementsByClassName("xhrpotbox");
         for(const image of uplexed) {
-            image.animate({
+            console.log(image.animate({
                 objectPosition: `${100 + nextPercentage}% center`
-            }, { duration: 1200, fill: "forwards" });
+            }, { duration: 1200, fill: "forwards" }));
         }
     }
     
