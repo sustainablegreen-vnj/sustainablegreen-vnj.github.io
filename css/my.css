@@ -309,9 +309,18 @@ a {
    margin:0;
    padding:0;
    background-image:url("https://images.unsplash.com/photo-1728986554951-801b2faf66c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-   background-repeat:no-repeat;
    background-attachment:fixed;
+   background-repeat:no-repeat;
    background-size: cover;
+}
+.left{
+   background-image:url("https://images.unsplash.com/photo-1633527169700-9cf7843fa715?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-attachment:fixed;
+   background-position:center;
+   background-repeat:no-repeat;
+   background-size: cover;
+   min-height:100vh;
+   padding-top:25%;
 }
 
 .bgimage{
@@ -552,7 +561,7 @@ details{
    display:flex;
    cursor:pointer;
    font-family:"Space Mono",monospace;
-   margin-left:5vmax;
+   margin-left:8vw;
    text-decoration:underline;
    font-weight:700;
 }
@@ -564,7 +573,7 @@ details{
    font-size:3vmax;
    cursor:pointer;
    font-family:"Space Mono",monospace;
-   margin-left:5vmax;
+   margin-left:8vw;
    text-decoration:underline;
    font-weight:700;
 }
@@ -591,3 +600,5 @@ details{
 *{
    scrollbar-width:none;
 }
+
+

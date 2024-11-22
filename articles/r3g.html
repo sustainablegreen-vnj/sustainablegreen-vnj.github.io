@@ -27,13 +27,81 @@
         </section>
         <br><br>
         <div class="left">
-            <article class="middleyap3r">
-                <p class="introyap introyap-anim skippable">
+                <p class="introyap introyap-anim skippable firstshow">
                     &nbsp; &nbsp;&nbsp;&nbsp;Reduce, Reuse, and Recycle (3R) are concepts on how 
-                    to correctly manage waste. In a flash, they are:
-                        <br><br>
+                    to correctly manage waste. Those concepts are:
+                        <br>
                 </p>
-            </article>   
+            <section class="brd brd-anim skippable ">
+              <dialog id="ReduceDialog">
+                  <form>
+                      <label>Reduce</label>
+                      <p class="r3s">
+                        <label>
+                          &nbsp; &nbsp;&nbsp;&nbsp;Reduce the amount of trash you create, in other words you’re cutting your 
+                          carbon footprint. There’re many ways to reduce your garbage, like:
+                          <ul>
+                          <li>Buying only what you need.</li>
+                          <li>Replace the use of plastic bags for more environmentally friendly paper bags.</li>
+                          <li>Choose products that are environmentally safe to discard, or have less environmentally damaging packaging.</li>
+                          <li>Buying items you can reuse and to reuse them as much as possible.</li>
+                          </ul>
+                        </label>
+                      </p>
+                      <div>
+                        <button value="default" formmethod="dialog">Close</button>
+                      </div>
+                    </form>
+              </dialog>
+              <button id="openReduce">Reduce</button>
+  
+              <dialog id="ReuseDialog">
+                  <form>
+                      <label>Reuse</label>
+                      <p class="r3s1">
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;Reuse as many items as many times as you 
+                          possibly can. Here’s a few examples on how you can reuse:
+                          <ul>
+                            <li>Jars, plastic or glass can really be helpful, especially for use in the kitchen.</li>
+                            <li>Plastic bags are extremely durable, and if you’re also trying to reduce the 
+                                trash you output, reusing plastic bags can be really beneficial.</li>
+                            <li>Give away your old clothes so they can have a new use.</li>
+                          </ul>
+                          An added benefit on reuse is the fact that you can reduce your spending by reducing the 
+                          amount of things you buy.
+                        </label>
+                      </p>
+                      <div>
+                        <button value="default" formmethod="dialog">Close</button>
+                      </div>
+                    </form>
+              </dialog>
+              <button id="openReuse">Reuse</button>
+  
+              <dialog id="RecycleDialog">
+                  <form>
+                      <label>Recycle</label>
+                      <p class="r3s3">
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;The third and and most commonly used R, Recycle. In this R, you 
+                          have multiple items that by themselves have no use, however they can be 
+                          processed into things that are useful. Recycling can be useful to not use and waste 
+                          virgin resources, and instead use resources that are no longer useful. There’s tons 
+                          of ways to recycle, like for example:
+                          <ul>
+                          <li>Making a pot out of old plastic bottles</li>
+                          <li>A book holder from old items</li>
+                          And another thing i'd like to mention Is art. There’s just something beautifully ironic 
+                          about the way something so useless can be turned into a symbol of redemption.
+                          </ul>
+                        </label>
+                      </p>
+                      <div>
+                        <button value="default" formmethod="dialog">Close</button>
+                      </div>
+                    </form>
+              </dialog>
+              <button id="openRecycle">Recycle</button>
+          </section>
         </div>
           <!-- MEWING PICTURES
            art: 
@@ -49,77 +117,6 @@
 
           -->
            <section>
-            <!--<a><img src="https://images.unsplash.com/photo-1728986554951-801b2faf66c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></a>-->
-        <section class="brd brd-anim skippable">
-            <dialog id="ReduceDialog">
-                <form>
-                    <label>Reduce</label>
-                    <p class="r3s">
-                      <label>
-                        &nbsp; &nbsp;&nbsp;&nbsp;Reduce the amount of trash you create, in other words you’re cutting your 
-                        carbon footprint. There’re many ways to reduce your garbage, like:
-                        <ul>
-                        <li>Buying only what you need.</li>
-                        <li>Replace the use of plastic bags for more environmentally friendly paper bags.</li>
-                        <li>Choose products that are environmentally safe to discard, or have less environmentally damaging packaging.</li>
-                        <li>Buying items you can reuse and to reuse them as much as possible.</li>
-                        </ul>
-                      </label>
-                    </p>
-                    <div>
-                      <button value="default" formmethod="dialog">Close</button>
-                    </div>
-                  </form>
-            </dialog>
-            <button id="openReduce">Reduce</button>
-
-            <dialog id="ReuseDialog">
-                <form>
-                    <label>Reuse</label>
-                    <p class="r3s1">
-                      <label>&nbsp;&nbsp;&nbsp;&nbsp;Reuse as many items as many times as you 
-                        possibly can. Here’s a few examples on how you can reuse:
-                        <ul>
-                          <li>Jars, plastic or glass can really be helpful, especially for use in the kitchen.</li>
-                          <li>Plastic bags are extremely durable, and if you’re also trying to reduce the 
-                              trash you output, reusing plastic bags can be really beneficial.</li>
-                          <li>Give away your old clothes so they can have a new use.</li>
-                        </ul>
-                        An added benefit on reuse is the fact that you can reduce your spending by reducing the 
-                        amount of things you buy.
-                      </label>
-                    </p>
-                    <div>
-                      <button value="default" formmethod="dialog">Close</button>
-                    </div>
-                  </form>
-            </dialog>
-            <button id="openReuse">Reuse</button>
-
-            <dialog id="RecycleDialog">
-                <form>
-                    <label>Recycle</label>
-                    <p class="r3s3">
-                      <label>&nbsp;&nbsp;&nbsp;&nbsp;The third and and most commonly used R, Recycle. In this R, you 
-                        have multiple items that by themselves have no use, however they can be 
-                        processed into things that are useful. Recycling can be useful to not use and waste 
-                        virgin resources, and instead use resources that are no longer useful. There’s tons 
-                        of ways to recycle, like for example:
-                        <ul>
-                        <li>yap</li>
-                        <li>yap</li>
-                        <li>yap</li>
-                        And another thing i'd like to mention Is art. There’s just something beautifully ironic about the way something so useless can be turned into a symbol of redemption.
-                        </ul>
-                      </label>
-                    </p>
-                    <div>
-                      <button value="default" formmethod="dialog">Close</button>
-                    </div>
-                  </form>
-            </dialog>
-            <button id="openRecycle">Recycle</button>
-        </section>
 
 
                         <br><br>
@@ -149,9 +146,11 @@
                         -->
                     </p>
             <p class="donate donate-anim skippable">
-                Want to take things for real? Donate today to Citarum River! <br><br>
-                Why should you donate?<br><br>
-                Donating, even just a tiny bit of money can mean the world. Even if you're not at the economical status to give away any money, you can still share and give the link around to those who can afford it. Any amount of help, whether economically or not will help.
+                However 3R is more of a passive way of helping the environment. Greeneration Foundation (GF) is an environmental foundation that focuses on issues of sustainable 
+                consumption and production in Indonesia. GF was founded in 2014 under the name Greeneration 
+                Indonesia Foundation and was formalized by Minister of Law and Human Rights Decree No. 
+                AHU-0000260.AH.01.05 of 2021 is an organization. The Green Fund Digital Philanthropy (GFDP) is a digital 
+                environmental restoration initiative which is owned by GF.
                 <br><br>
                 What will they use the money for?<br></p>
                 <ol class="benefits benefits-anim skippable">
