@@ -251,12 +251,19 @@ a {
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15em;
+   z-index:15;
+   min-height:100vh;
  }
  .dram2-anim{
    opacity:0;
    animation:
+      intromove 1s forwards,
       fadeIn2 2.5s forwards,
       typing2 2.5s steps(999,end);
+ }
+ @keyframes intromove{
+   from{transform:translate(50%,50%)}
+   to{transform:translate(0%,0%)}
  }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -410,9 +417,11 @@ a {
 
 .sources{
    float:center;
-   margin-left:15vmax;
+   margin-left:15vw;
    opacity:0;
    color:lightblue;
+   background-color:black;
+   margin-right:15vw;
 }
 
 .sources-anim {
@@ -472,6 +481,7 @@ a {
    font-family:'Space Mono', monospace;
    text-align:justify;
    font-size:2vmax;
+   display:flex;
 }
 .donate-anim {
    animation:appear 2s forwards;
@@ -602,8 +612,11 @@ details{
 }
 
 .pollutionpic{
-   margin-left:65vw;
+   margin-right:10vw;
    height:30vh;
    width:25vw;
    display:flex;
+   object-fit:cover;
+   object-position:fixed;
+   float:right;
 }
