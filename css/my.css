@@ -101,16 +101,12 @@ as the writer of this css, if the code works don't touch it
    99%{opacity:1;}
    100%{opacity:1;}
 }
-
-
 .boxesofcontents > .bg{
    width:15vmax;
    height: 15vmax;
    object-fit:cover;
    object-position: 100% center;
 }
-
-
 
 @keyframes bioxking{
    from{transform:translate(-800%,-50%)}
@@ -190,6 +186,9 @@ as the writer of this css, if the code works don't touch it
    float:center;
    text-align:center;
  }
+.left p{
+   background-color:black;
+}
 
 .navbar1{
    color:white;
@@ -219,7 +218,7 @@ as the writer of this css, if the code works don't touch it
 
  .dramaintro{
    width:100%;
-   height:100%;
+   height:50%;
    border:0px;
    text-align:center;
    font-size:50px;
@@ -228,6 +227,7 @@ as the writer of this css, if the code works don't touch it
    margin: 0 auto;
    letter-spacing:0.15em;
    color:white;
+   background-color:black;
  }
 
 a {
@@ -247,22 +247,19 @@ a {
    font-size:3.23vmax;
    overflow: hidden;
    left:50%; right:50%;
-
    white-space: nowrap;
    margin: 0 auto;
-   letter-spacing:0.15em;
+   letter-spacing:0.15vmax;
    z-index:15;
    min-height:100vh;
  }
  .dram2-anim{
-   opacity:0;
+   opacity:1;
    animation:
-      intromove 1s forwards,
-      fadeIn2 2.5s forwards,
-      typing2 2.5s steps(999,end);
+      intromove 4s forwards;
  }
  @keyframes intromove{
-   from{transform:translate(50%,50%)}
+   from{transform:translate(0%,50%)}
    to{transform:translate(0%,0%)}
  }
 @keyframes fadeIn2{
@@ -288,23 +285,6 @@ a {
    50% {border-color:green;}
  }
 
- .dramlast{
-   font-family: "Cardo", serif;
-   font-weight: 400;
-   font-style: normal;
-   width:100%;
-   height:30vh;
-   text-align:center;
-   overflow: hidden;
-   border-right: .15em solid black;
-   white-space: nowrap;
-   margin: 0 auto;
-   letter-spacing:0.15em;
-   color:white;
-   padding-top:5vh;
-   padding-bottom:50vh;
-   font-size:4vmin;
- }
 
  .bg1{
    width:100%;
@@ -326,8 +306,11 @@ a {
    background-position:center;
    background-repeat:no-repeat;
    background-size: cover;
-   min-height:110vh;
-   
+   padding-top:50vh;
+   min-height:100vh;
+   width:100vw;
+   background-position-x: center;
+
 }
 
 .bgimage{
@@ -607,9 +590,6 @@ details{
    font-size:1.6vmax;
 }
 
-*{
-   scrollbar-width:none;
-}
 
 .pollutionpic{
    margin-right:10vw;
@@ -619,4 +599,12 @@ details{
    object-fit:cover;
    object-position:fixed;
    float:right;
+   margin-top:5vw;
 }
+
+ html{
+   -webkit-font-smoothing:antialiased;
+   -webkit-text-size-adjust:none;
+   scroll-behavior:smooth;
+   scrollbar-width:none;
+ }
