@@ -204,7 +204,7 @@ as the writer of this css, if the code works don't touch it
    display:flex;
    font-size:2vmax;
    padding:2px;
-   z-index: 10;
+   z-index: 15;
    text-decoration:underline;
  }
 
@@ -227,7 +227,7 @@ as the writer of this css, if the code works don't touch it
    margin: 0 auto;
    letter-spacing:0.15em;
    color:white;
-   background-color:black;
+   
  }
 
 a {
@@ -238,29 +238,30 @@ a {
 }
 
  .dram2{
-   margin-top:10vh;
    font-family: "Space Mono", monospace;
    font-weight: 1000;
    font-style: normal;
-   width:100vw;
+   width:100%;
    text-align:center;
    font-size:3.23vmax;
    overflow: hidden;
-   left:50%; right:50%;
    white-space: nowrap;
    margin: 0 auto;
    letter-spacing:0.15vmax;
-   z-index:15;
-   min-height:100vh;
+   z-index:14;
+   min-height:50vh;
+   justify-content:center;
+   position:fixed;
+   display:flex;
  }
  .dram2-anim{
    opacity:1;
    animation:
-      intromove 4s forwards;
+      intromove 3s forwards;
  }
  @keyframes intromove{
    from{transform:translate(0%,50%)}
-   to{transform:translate(0%,0%)}
+   to{transform:translate(0%,-45%);}
  }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -301,22 +302,21 @@ a {
    background-size: cover;
 }
 .left{
-   background-image:url("https://images.unsplash.com/photo-1633527169700-9cf7843fa715?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-image:url("https://images.unsplash.com/photo-1473116763249-2faaef81ccda?q=80&w=1496&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
    background-attachment:fixed;
    background-position:center;
    background-repeat:no-repeat;
    background-size: cover;
-   padding-top:50vh;
-   min-height:100vh;
+   padding-top:1vh;
+   min-height:150vh;
    width:100vw;
    background-position-x: center;
-
+   padding-bottom:3vh;
 }
 
 .bgimage{
    position:absolute;
    width:100%;
-   
 }
 
  #XHRPotFetchy{
@@ -541,9 +541,19 @@ details{
    animation: mouse 3s forwards;
    animation-delay:2.5s;
    font-family:"Space Mono",monospace;
-   text-decoration:underline;
    font-weight:700;
-   
+   background-image:url("https://images.unsplash.com/photo-1565879422384-053cc91c8b8b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-position:center;
+   background-attachment:fixed;
+   background-repeat:no-repeat;
+   background-size:cover;
+   padding-top:20vh;
+   min-height:50vh;
+   min-width:50vw;
+   background-position-x:center;
+   text-align:center;
+   justify-content:center;
+   margin-top:8vh;
 }
 
 #openReuse{
@@ -554,9 +564,21 @@ details{
    display:flex;
    cursor:pointer;
    font-family:"Space Mono",monospace;
-   margin-left:8vw;
-   text-decoration:underline;
+   margin-top:2vh;
+   margin-left:20vw;
+   margin-right:20vw;
    font-weight:700;
+   background-image:url("https://images.unsplash.com/photo-1602616821759-22514131f53b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   padding-top:20vh;
+   min-height:50vh;
+   min-width:50vw;
+   background-position-x: center;
+   text-align:center;
+   justify-content:center;
 }
 
 #openRecycle{
@@ -566,9 +588,20 @@ details{
    font-size:3vmax;
    cursor:pointer;
    font-family:"Space Mono",monospace;
-   margin-left:8vw;
+   margin-top:2vh;
+   margin-right:20vw;
    text-decoration:underline;
    font-weight:700;
+   background-image:url("https://images.unsplash.com/photo-1633527169700-9cf7843fa715?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position:center;
+   background-size: cover;
+   min-height:50vh;
+   width:50vw;
+   background-position-x: center;
+   text-align:center;
+   justify-content:center;
 }
 
 .benefits{
