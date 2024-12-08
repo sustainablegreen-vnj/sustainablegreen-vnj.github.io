@@ -14,11 +14,15 @@
    margin: 0 auto;
    letter-spacing:0.1em;
    opacity:0;
+   overflow-x:hidden;
+}
+
+.dram-anim {
+   opacity:0;
    animation:
       fadeIn2 2.5s forwards,
       typing2 2.5s steps(40,end),
       blink-caret2 0.75s step-end 45;
-   overflow-x:hidden;
 }
 @keyframes fadeIn2{
    0% {opacity:0;}
@@ -90,8 +94,10 @@ body {
    color:white;
    font-family:"Space Mono",monospace;
    font-size:1.8vmax;
-   animation:fadingin 1s forwards;
    opacity:0;
+}
+.yap1-anim {
+   animation:fadingin 1s forwards;
    animation-delay:2.5s;
 }
 

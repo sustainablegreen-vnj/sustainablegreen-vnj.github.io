@@ -5,15 +5,17 @@ body{
    background-attachment:fixed;
    background-size: cover;
 }
-
+hr.solid {
+   border-top: 1px solid #424242;
+   border-radius: 50%;
+   width: 80%
+}
 .yap2{
-   margin-top:10vh;
+   padding: 8vh 13vw 5vw 13vw;
    color:white;
    font-size:1.8vmax;
    font-family:"Space Mono", monospace;
-   margin-left:15vw;
    text-align:justify;
-   margin-right:40vw;
 }
 
 .navbar1{
@@ -34,6 +36,199 @@ body{
    text-decoration:underline;
 }
 
-*{
-   scrollbar-width:none;
+
+
+
+ 
+/*
+ .button {
+   align-items: center;
+   background: 0 0;
+   border: none;
+   border-radius: 6.25rem;
+   color: var(--color-surface-white);
+   cursor: pointer;
+   display: inline-flex;
+   font-size: 1.2rem;
+   font-weight: 600;
+   gap: 0.363636em;
+   justify-content: center;
+   letter-spacing: -0.01em;
+   line-height: 1.04545;
+   overflow: hidden;
+   padding: 0.9375rem 1.5rem;
+   position: relative;
+   text-decoration: none;
+   word-break: break-word;
+   text-decoration: none;
+ }
+ 
+ .button--stroke:after {
+   bottom: 0;
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+ 
+ .button--stroke:after {
+   border: 0.125rem solid var(--color-surface-white);
+   border-radius: 6.25rem;
+   content: "";
+   pointer-events: none;
+ }
+ 
+ .button__label {
+   position: relative;
+   text-align: center;
+   transition: color 50ms var(--ease-in-out-quart);
+ }
+ 
+ .button--stroke:hover .button__label {
+   transition: color 0.15s var(--ease-in-out-quart);
+ }
+ 
+ .button__flair {
+   bottom: 0;
+   left: 0;
+   pointer-events: none;
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+ 
+ .button--stroke .button__flair {
+   transform: scale(0);
+   transform-origin: 0 0;
+   will-change: transform;
+ }
+ 
+ .button__flair:before {
+   aspect-ratio: 1/1;
+   background-color: var(--color-surface-white);
+   border-radius: 50%;
+   content: "";
+   display: block;
+   left: 0;
+   pointer-events: none;
+   position: absolute;
+   top: 0;
+   transform: translate(-50%, -50%);
+   width: 170%;
+ }
+CHECK LATER*/
+
+
+
+
+.header {
+   min-height: 80vh;
+   width: 100%;
+   background: linear-gradient(rgba(181, 181, 181, 0.1), rgba(72, 72, 72, 0.4));
+   background-position: center;
+   background-size: cover;
+   position: relative;
 }
+.top {
+   width: 100%;
+   color: #fff;
+   position: absolute;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.top h1 {
+   font-size: 10vh;
+}
+.intro {
+   background: #2c2c2c;
+}
+.slideshow-container {
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
+   overflow: hidden;
+}
+
+.wrapper {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+   width: 100%;
+}
+
+.mySlide {
+   width: 100%;
+   flex-shrink: 0;
+}
+
+.prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   padding: 16px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   user-select: none;
+   z-index: 1000;
+}
+
+.prev {
+   left: 0;
+   border-radius: 3px 0 0 3px;
+}
+
+.next {
+   right: 0;
+   border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+   background-color: rgba(116, 116, 116, 0.8);
+}
+
+.text {
+   color: #f2f2f2;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+}
+
+.numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+}
+
+.dot {
+   cursor: pointer;
+   height: 9px;
+   width: 9px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+   background-color: #717171;
+}
+.yipity {
+   color:white;
+   font-size:1.8vmax;
+   font-family:"Space Mono", monospace;
+   padding: 10vh 13vw 15vh 13vw;
+}
+*{
+   scrollbar-width: none;
+}
+/*please don't grade how unordered everything is :')*/

@@ -1,6 +1,8 @@
 const articledir = "/articles";
 const directoryFile = `${articledir}/directory.txt`;
 let xhrpot = null;
+let schlattbg = null;
+let deskrip = null, titler = null;
 
 // Rant
 // Chrome is memory greedy: To chrome, memory is free real estate
@@ -169,10 +171,54 @@ function carouselMyFetches() {
     window.ontouchmove = e => handleOnMove(e.touches[0]);
 }
 
+function createOnHoverBox(img, dset, titlized, deskripzed){
+    function schlattor(){
+        schlattbg.classList.add("paged");
+        schlattbg.src = img.src;
+        console.log("hov");
+    }
+
+    function msgify(){
+        titlized.textContent = dset.title;
+        deskripzed.textContent = dset.description;
+
+        titlized.style.visibility = "visible";
+        deskripzed.style.visibility = "visible";
+    }
+
+    return function(){
+        msgify();
+        schlattor();
+    };
+}
+
+function createOnUnhoverBox(img, dset, titlized, deskripzed){
+    function schlattor() {
+        schlattbg.classList.remove("paged");
+        schlattbg.src = img.src;
+        console.log("nohov");
+    }
+
+    function msgify(){
+        titlized.textContent = "";
+        deskripzed.textContent = "";
+
+        titlized.style.visibility = "hidden";
+        deskripzed.style.visibility = "hidden";
+    }
+
+    return function(){
+        msgify();
+        schlattor();
+    };
+}
+
 document.addEventListener("DOMContentLoaded", function(){ // On ready, reference XHRPot, the TOC and start fetching.
     document.body.style.pointerEvents = "none";
 
     xhrpot = gebi("XHRPot");
+    schlattbg = gebi("zoombg").querySelector("img");
+    deskrip = gebi("descriptor"); titler = gebi("titletor");
     const ases = xhrpot.getElementsByTagName("a");
     /* fetchMeMyPages(function() {
         console.log("done");
@@ -184,43 +230,48 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
             a.classList.remove("xhrpotboxanim1");
             a.style.transform = "translate(0%,-50%)";
         }
-        document.body.style.pointerEvents = "initial";
+
+        setTimeout(function(){
+            carouselMyFetches();
+            //help.
+            for(const b of ases){
+                b.classList.remove("xhrpotboxanim2");
+                b.style.transform = "translate(0%,-50%)";
+            }
+
+            setTimeout(function(){
+                carouselMyFetches();
+                //help.
+                for(const c of ases){
+                    c.classList.remove("xhrpotboxanim3");
+                    c.style.transform = "translate(0%,-50%)";
+                }
+
+                setTimeout(function(){
+                    carouselMyFetches();
+                    //help.
+                    for(const d of ases){
+                        d.classList.remove("xhrpotboxanim4");
+                        d.style.transform = "translate(0%,-50%)";
+                    }
+                    document.body.style.pointerEvents ="all";
+
+                    for(const preimgf of ases){
+                        const imgf = preimgf.querySelector("img");
+                        const dset = preimgf.dataset;
+                        imgf.onmouseover = createOnHoverBox(imgf, dset, titler, deskrip);
+                        imgf.onmouseout = createOnUnhoverBox(imgf, dset, titler, deskrip);
+                    }
+                }, 400);
+            }, 400); //3430
+        }, 400); // 3230
     }, 2620);
-    setTimeout(function() {
-        carouselMyFetches();
-        //help.
-        for(const b of ases){
-            b.classList.remove("xhrpotboxanim2");
-            b.style.transform = "translate(0%,-50%)";
-        }
-        document.body.style.pointerEvents ="initial";
-    },3020);
-    setTimeout(function(){
-        carouselMyFetches();
-        //help.
-        for(const c of ases){
-            c.classList.remove("xhrpotboxanim3");
-            c.style.transform = "translate(0%,-50%)";
-        }
-        document.body.style.pointerEvents ="initial";
-    },3420);
-    setTimeout(function(){
-        carouselMyFetches();
-        //help.
-        for(const d of ases){
-            d.classList.remove("xhrpotboxanim4");
-            d.style.transform = "translate(0%,-50%)";
-        }
-        document.body.style.pointerEvents ="initial";
-    },3820);
 
     for(const a of ases) {
         a.onclick = function(e) {
-            console.log("Default");
             e.preventDefault();
             const self = this;
             const onDone = function(){
-                console.log("Ding");
                 window.location.href = self.href;
             };
             setTimeout(onDone, 1000); // Replace this with zoom done event

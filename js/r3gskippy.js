@@ -3,6 +3,7 @@ const animables = qselectAll(".skippable");
 
 function removeSkip() {
    skippybtn.remove();
+   document.body.style.overflowY = "initial";
 }
 
 skippybtn.onclick = function(){
@@ -15,6 +16,14 @@ skippybtn.onclick = function(){
       elem.classList.remove("donate-anim");
       elem.classList.remove("benefits-anim");
       elem.classList.remove("sources-anim");
+
+      if("transpose" in elem.dataset){
+         elem.style.transform = elem.dataset.transpose;
+      }
    }
 }
+
+setTimeout(function(){
+   removeSkip();
+}, 2000);
 
