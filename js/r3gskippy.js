@@ -25,5 +25,5 @@ skippybtn.onclick = function(){
 
 setTimeout(function(){
    removeSkip();
-}, 2000);
+}, 3000);
 

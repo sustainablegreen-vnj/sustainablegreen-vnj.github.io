@@ -1,0 +1,37 @@
+/*!
+ * Libmcarousel
+ * A fork of Continuous Carousel ∞ v0.2.1 modified to scroll on demand.
+ * 
+ * 
+ * A fork of Continuous Carousel ∞ v0.2.1
+ * Continuous carousel that uses vanilla JavaScript & CSS animations.
+ *
+ * @author MXPSQL Server 20953 Onetechguy, Jon Chretien
+ * @license Released under the MIT license.
+ */
+
+ .m-carousel-container {
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .m-carousel-group {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .m-carousel-container[data-direction="horizontal"] .c-carousel-group {
+    flex-direction: row;
+  }
+  
+  .m-carousel-container[data-direction="vertical"] .c-carousel-group {
+    flex-direction: column;
+  }
+  
+  .m-carousel-visuallyhidden {
+    display: none;
+  }

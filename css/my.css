@@ -68,6 +68,7 @@ as the writer of this css, if the code works don't touch it
    font-style: normal;
    animation:none;
    transform:scale(2);
+   opacity:0;
 }
 .xhrpotbox{
    gap:2vmax;
@@ -163,15 +164,15 @@ as the writer of this css, if the code works don't touch it
    animation-direction:normal;
    animation-fill-mode:normal;
 }
-@keyframes boxing{
-   0% {background-color: #0c3c2b;}
-   16.6% {background-color: #1B4332;}
-   33.3% {background-color: #2D6A4F;}
-   50% {background-color: #40916C;}
-   66.6% {background-color: #2D6A4F;}
-   80%{background-color: #1B4332;}
-   100% {background-color: #0c3c2b;}
+
+.fullbg{
+   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 24%, rgba(7,27,0,1) 100%);
+   position:fixed;
+   z-index:15;
+   float:center;
+   justify-content:center;
 }
+
 @media only screen and (min-width:768px){
    /*space mono regular */
    .smr { 
@@ -214,7 +215,7 @@ as the writer of this css, if the code works don't touch it
       color:white;
       height:3vh;
       margin-top:8vh;
-      margin-left:5vw;
+      margin-left:7.5vw;   
       position:fixed;
       justify-content:center;
       transform:translate(-50%,0%);
@@ -238,7 +239,7 @@ as the writer of this css, if the code works don't touch it
 
    .dramaintro{
       width:100%;
-      height:50%;
+      height:22.5%;
       border:0px;
       text-align:center;
       font-size:50px;
@@ -320,6 +321,7 @@ as the writer of this css, if the code works don't touch it
       background-attachment:fixed;
       background-repeat:no-repeat;
       background-size: cover;
+      
    }
    .left{
       background-image:url("https://images.unsplash.com/photo-1473116763249-2faaef81ccda?q=80&w=1496&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -328,11 +330,9 @@ as the writer of this css, if the code works don't touch it
       background-repeat:no-repeat;
       padding-top:1vh;
       min-height:150vh;
-      width: 100% cover;
+      min-width: 100% cover;
       background-position-x: center;
-      padding-bottom:3vh;
-      margin-left:15vw;
-      margin-right:15vw;
+      padding-bottom:3vh; 
    }
 
    .bgimage{
@@ -376,16 +376,6 @@ as the writer of this css, if the code works don't touch it
       font-family:"Space Mono", monospace;
    }
 
-   .yap3r{
-      color:white;
-      font-family:"Space Mono", monospace;
-      font-style:normal;
-      margin-top:4vmax;
-      margin-left:45vw;
-      margin-right:16vw;
-      text-align:justify;
-      font-size:1.8vmax;
-   }
    .brd {
       color:white;
       font-family:"Space Mono", monospace;
@@ -406,7 +396,7 @@ as the writer of this css, if the code works don't touch it
       font-size:2vmax;
       font-weight:700;
       opacity:0;
-      width:80%;
+      width:90%;
       margin-left:5vw;
       margin-right:5vw;
    }
@@ -422,10 +412,9 @@ as the writer of this css, if the code works don't touch it
 
    .sources{
       float:center;
-      margin-left:15vw;
+      margin-left:25vw;
       opacity:0;
       color:lightblue;
-      background-color:black;
       margin-right:15vw;
    }
 
@@ -436,9 +425,9 @@ as the writer of this css, if the code works don't touch it
 
    .zigma{
       overflow:hidden;
-      
       text-decoration:underline;
       font-style:underline;
+      z-index:16;
    }
 
    .aeng{
@@ -446,7 +435,6 @@ as the writer of this css, if the code works don't touch it
       width:45vmax;
       justify-content:justify;
       text-align:justify;
-      margin-left:15vw;
       border: white solid 5px;
       padding:0.2vmax;
       cursor:pointer;
@@ -466,7 +454,6 @@ as the writer of this css, if the code works don't touch it
       cursor:pointer;
       display:flex;
       justify-content:justify;
-      margin-left:15vw;
    }
    .aeng2{
       width:20vmax;
@@ -476,17 +463,16 @@ as the writer of this css, if the code works don't touch it
       cursor:pointer;
       display:flex;
       justify-content:justify;
-      margin-left:15vw;
    }
 
    .donate{
       color:white;
-      margin-left:15vw;
       width:45vmax;
       font-family:'Space Mono', monospace;
       text-align:justify;
       font-size:2vmax;
       display:flex;
+      margin-left:5vw;
    }
    .donate-anim {
       animation:appear 2s forwards;
@@ -513,8 +499,8 @@ as the writer of this css, if the code works don't touch it
    }
 
    #ReduceDialog{
-      height:50%;
-      width:25%;
+      height:75%;
+      width:30%;
       margin-right:14vw;
       background-color:black;
       color:white;
@@ -523,8 +509,8 @@ as the writer of this css, if the code works don't touch it
    }
 
    #ReuseDialog{
-      height:50%;
-      width: 25%;
+      height:75%;
+      width: 30%;
       margin-right:14vw;
       background-color:black;
       color:white;
@@ -533,8 +519,8 @@ as the writer of this css, if the code works don't touch it
    }
 
    #RecycleDialog{
-      height:50%;
-      width:25%;
+      height:75%;
+      width:30%;
       background-color:black;
       color:white;
       justify-content:justify;
@@ -559,7 +545,8 @@ as the writer of this css, if the code works don't touch it
       color:white;
       border:none;   
       display:flex;
-      margin-right:15vw;
+      margin-left:-5.5vw;
+      margin-right:17.5vw;
       animation: mouse 3s forwards;
       animation-delay:2.5s;
       font-family:"Space Mono",monospace;
@@ -569,7 +556,7 @@ as the writer of this css, if the code works don't touch it
       background-attachment:fixed;
       background-repeat:no-repeat;
       background-size:cover;
-      padding-top:20vh;
+      padding-top:25vh;
       min-height:50vh;
       width:50vw;
       background-position-x:center;
@@ -587,14 +574,14 @@ as the writer of this css, if the code works don't touch it
       cursor:pointer;
       font-family:"Space Mono",monospace;
       margin-top:2vh;
-      margin-left:15vw;
+      margin-left:25vw;
       font-weight:700;
       background-image:url("https://images.unsplash.com/photo-1602616821759-22514131f53b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center;
       background-size: cover;
-      padding-top:20vh;
+      padding-top:25vh;
       min-height:50vh;
       width:50vw;
       background-position-x: center;
@@ -610,15 +597,17 @@ as the writer of this css, if the code works don't touch it
       cursor:pointer;
       font-family:"Space Mono",monospace;
       margin-top:2vh;
-      margin-right:15vw;
+      margin-left:-5.5vw;
+      margin-right:17.5vw;
       font-weight:700;
       background-image:url("https://images.unsplash.com/photo-1633527169700-9cf7843fa715?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position:center;
       background-size: cover;
+      padding-top:5vh;
       min-height:50vh;
-      width:60vw;
+      width:50vw;
       background-position-x: center;
       text-align:center;
       justify-content:center;
@@ -639,7 +628,7 @@ as the writer of this css, if the code works don't touch it
    }
 
    #skipanim{
-      margin-left:90vw;
+      margin-left:92.75vw;
       font-size:1.6vmax;
    }
 
@@ -1098,4 +1087,8 @@ a:hover {
 .drag-proxy {
   visibility: hidden;
   position: absolute;
+}
+.GFBG {
+   background: #2c2c2c;
+   margin: 0 5vw 0 5vw;
 }
