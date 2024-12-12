@@ -172,8 +172,12 @@ as the writer of this css, if the code works don't touch it
    float:center;
    justify-content:center;
 }
+.clarification{
+   color:white
+}
 
-@media only screen and (min-width:768px){
+
+@media only screen and (min-width:640px){
    /*space mono regular */
    .smr { 
       font-family: "Space Mono", monospace;
@@ -248,7 +252,6 @@ as the writer of this css, if the code works don't touch it
       margin: 0 auto;
       letter-spacing:0.15em;
       color:white;
-      
    }
 
    a {
@@ -659,10 +662,18 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.introdonate{
+   color:white;
+   width:80vw;
+   font-family:'Space Mono', monospace;
+   text-align:justify;
+   font-size:2vmax;
+   margin-left:5vw;
+}
 
- /*@media only screen and (min-width:600px){
+ @media only screen and (max-width:640px){
    .navbar-brand{
-      font-size:20px;
+      font-size:15px;
    }
    .box1{
       width:20px;
@@ -988,7 +999,7 @@ body {
       width:25vw;
       margin-top:5vw;
    }
-} */
+} 
 * {
 	box-sizing: border-box;
 }
