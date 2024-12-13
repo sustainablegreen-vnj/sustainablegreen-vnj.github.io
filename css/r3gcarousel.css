@@ -1,0 +1,20 @@
+.splide__track{
+    height:60vh;
+}
+.splide__slide {
+    width: 80vw;
+    height: 100vh;
+    background: #424242;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 25px;
+    
+}
+#vcarousel {
+    height: 20%;
+}
+.splide_list {
+
+}

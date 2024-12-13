@@ -4,12 +4,20 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/Draggable.min.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="/css/my.css">
     <link rel="stylesheet" href="/css/common.css">
 
         <meta itemprop="Title" content="3R" class='title3r'>
-        <meta itemprop="Description" class='3rcontent' content="Reduce, Reuse, Recycle">
+        <meta itemprop="Description" class='3rcontent' content="3R = Reduce, Reuse, Recycle">
         <meta itemprop="Image" class='3rcontent' content="https://images.unsplash.com/photo-1675395594169-c6b14260e271?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+        <link rel="stylesheet" href="/css/r3gcarousel.css">
 
         <script src="/js/commonu.js"></script>
     </head>
@@ -32,7 +40,7 @@
         </section>
         <section class ="dramaintro fullbg">
                 <br><br><br>
-                <header data-transpose="translate(0%,-33%)" class="dram2 dram2-anim skippable">3R = Reduce, Reuse, Recycle</header>
+                <header data-transpose="translate(0%,100%)" class="dram2 dram2-anim skippable">3R = Reduce, Reuse, Recycle</header>
         </section>
         <br><br><br><br><br><br><br><br><br>
         <div class="left">
@@ -42,75 +50,84 @@
                         
                 </p>
             <section class="brd brd-anim skippable ">
-              <dialog id="ReduceDialog">
-                  <form>
-                      <label class="Reducelabel"><b>Reduce</b></label>
-                      <p class="r3s">
-                        <label>
-                          &nbsp; &nbsp;&nbsp;&nbsp;Reduce the amount of waste you generate everyday. The goal is to prevent creating waste all together, conserves natural resources like water and raw materials, and reduce carbon footprint.
-                          There’re many ways to reduce your garbage, for example:
-                          <ol>
-                          <li>Buying products that you really need and better quality so they can last longer.</li><br>
-                          <li>Replace the use of plastic bags, utensils, water bottles for more environmentally friendly paper bags, recyclable utensils, and your own water bottle.</li><br>
-                          <li>Choose products that are environmentally safe to discard, or have less environmentally damaging packaging.</li><br>
-                          <li>Buying items you can reuse and to reuse them as much as possible.</li>
-                          </ol>
-                        </label>
-                      </p>
-                      <div>
-                        <button value="default" formmethod="dialog">Close</button>
-                      </div>
-                    </form>
-              </dialog>
-              <button id="openReduce">Reduce</button>
+            <section class="splide" id="vcarousel" aria-label="Basic Structure Example">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide"><dialog id="ReduceDialog">
+                    <form>
+                        <label class="Reducelabel"><b>Reduce</b></label>
+                        <p class="r3s">
+                          <label>
+                            &nbsp; &nbsp;&nbsp;&nbsp;Reduce the amount of waste you generate everyday. The goal is to prevent creating waste all together, conserves natural resources like water and raw materials, and reduce carbon footprint.
+                            There’re many ways to reduce your garbage, for example:
+                            <ol>
+                            <li>Buying products that you really need and better quality so they can last longer.</li><br>
+                            <li>Replace the use of plastic bags, utensils, water bottles for more environmentally friendly paper bags, recyclable utensils, and your own water bottle.</li><br>
+                            <li>Choose products that are environmentally safe to discard, or have less environmentally damaging packaging.</li><br>
+                            <li>Buying items you can reuse and to reuse them as much as possible.</li><br>
+                            </ol>
+                          </label>
+                        </p>
+                        <div>
+                          <button value="default" formmethod="dialog">Close</button>
+                        </div>
+                      </form>
+                </dialog>
+                <button id="openReduce">Reduce</button></li>
+                  <li class="splide__slide"><dialog id="ReuseDialog">
+                    <form>
+                        <label>Reuse</label>
+                        <p class="r3s1">
+                          <label>&nbsp;&nbsp;&nbsp;&nbsp;Reuse as many items as many times as you 
+                            possibly can. Here’s a few examples on how you can reuse:
+                            <ol>
+                              <li>Jars, plastic or glass can really be helpful, especially for use in the kitchen.</li><br>
+                              <li>Plastic bags are extremely durable, and if you’re also trying to reduce the 
+                                  trash you output, reusing plastic bags can be really beneficial.</li><br>
+                              <li>Give away your old clothes so they can have a new use.</li><br>
+                            </ol>
+                            An added benefit on reuse is the fact that you can reduce your spending by reducing the 
+                            amount of things you buy.
+                          </label>
+                        </p>
+                        <div>
+                          <button value="default" formmethod="dialog">Close</button>
+                        </div>
+                      </form>
+                </dialog>
+                <button id="openReuse">Reuse</button></li>
+                  <li class="splide__slide"><dialog id="RecycleDialog">
+                    <form>
+                        <label>Recycle</label>
+                        <p class="r3s3">
+                          <label>&nbsp;&nbsp;&nbsp;&nbsp;The third and and most commonly used R, Recycle. In this R, you 
+                            have multiple items that by themselves have no use, however they can be 
+                            processed into things that are useful. Recycling can be useful to not use and waste 
+                            virgin resources, and instead use resources that are no longer useful. There’s tons 
+                            of ways to recycle, like for example:
+                            <ol>
+                            <li>Making a pot out of old plastic bottles.</li><br>
+                            <li>A book holder from old items.</li><br>
+                            <li>And another thing we'd like to mention Is art. There’s just something beautifully ironic 
+                            about the way something so useless can be turned into a symbol of redemption.</li><br>
+                            </ol>
+                          </label>
+                        </p>
+                        <div>
+                          <button value="default" formmethod="dialog">Close</button>
+                        </div>
+                      </form>
+                </dialog>
+                <button id="openRecycle">Recycle</button></li>
+                </ul>
+              </div>
+            </section>
+              
               <br>
   
-              <dialog id="ReuseDialog">
-                  <form>
-                      <label>Reuse</label>
-                      <p class="r3s1">
-                        <label>&nbsp;&nbsp;&nbsp;&nbsp;Reuse as many items as many times as you 
-                          possibly can. Here’s a few examples on how you can reuse:
-                          <ol>
-                            <li>Jars, plastic or glass can really be helpful, especially for use in the kitchen.</li>
-                            <li>Plastic bags are extremely durable, and if you’re also trying to reduce the 
-                                trash you output, reusing plastic bags can be really beneficial.</li>
-                            <li>Give away your old clothes so they can have a new use.</li>
-                          </ol>
-                          An added benefit on reuse is the fact that you can reduce your spending by reducing the 
-                          amount of things you buy.
-                        </label>
-                      </p>
-                      <div>
-                        <button value="default" formmethod="dialog">Close</button>
-                      </div>
-                    </form>
-              </dialog>
-              <button id="openReuse">Reuse</button>
+              
               <br>
-              <dialog id="RecycleDialog">
-                  <form>
-                      <label>Recycle</label>
-                      <p class="r3s3">
-                        <label>&nbsp;&nbsp;&nbsp;&nbsp;The third and and most commonly used R, Recycle. In this R, you 
-                          have multiple items that by themselves have no use, however they can be 
-                          processed into things that are useful. Recycling can be useful to not use and waste 
-                          virgin resources, and instead use resources that are no longer useful. There’s tons 
-                          of ways to recycle, like for example:
-                          <ol>
-                          <li>Making a pot out of old plastic bottles</li>
-                          <li>A book holder from old items</li>
-                          <li>And another thing we'd like to mention Is art. There’s just something beautifully ironic 
-                          about the way something so useless can be turned into a symbol of redemption.</li>
-                          </ol>
-                        </label>
-                      </p>
-                      <div>
-                        <button value="default" formmethod="dialog">Close</button>
-                      </div>
-                    </form>
-              </dialog>
-              <button id="openRecycle">Recycle</button>
+              
           </section>
         </div>
           <!-- MEWING PICTURES
@@ -155,52 +172,70 @@
                         https://images.unsplash.com/photo-1680343235515-1db6e6f843ed?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
                         -->
                     </p>
-                    
             <section class="GFBG">
               <br>
               <p class="introdonate donate-anim skippable">These three concepts are crucial to save earth. People don't realize that implementing 3R isn't
                 that complicated, and we'd want to bring it to light so that people can implement 3R into their lives.
                 They also don't realize that you don't need to do anything grand or magnificent, but just implementing
-                these concepts, even just a little bit into your life can mean everything.<br><br>
+                these concepts, even just a little bit into your life can mean everything.<br><br><br>
               </p>
-              <img src="https://truthout.org/app/uploads/2024/09/2024_0905-pollution-1200x800.jpg" class="pollutionpic">
-            <p class="introdonate donate-anim skippable"><b>But how can you help directly?</b></p><br><br>
+            <p class="introquestion donate-anim skippable"><b>But how can you help directly?</b></p><br><br>
             <p class="donate donate-anim skippable">
-                The Greeneration Foundation (GF) is an environmental foundation that focuses on issues of sustainable 
+                An example is by helping The Greeneration Foundation (GF), which is an environmental foundation that focuses on issues of sustainable 
                 consumption and production in Indonesia. The Green Fund Digital Philanthropy (GFDP) is a digital 
                 environmental restoration initiative which is owned by GF. 
                 
-                <br><br>
-                What does GFDP do?<br></p>
+                <br><br><br><br>
+                What does GFDP acctually do and why should you donate to them?<br></p>
+                <img src="https://truthout.org/app/uploads/2024/09/2024_0905-pollution-1200x800.jpg" class="pollutionpic">
+                <br>
+                <img src="https://res.cloudinary.com/tearfund/image/fetch/c_scale,w_1248/f_auto/https://www.tearfund.org/-/media/tearfund/images/stories/2023/03/waste-pickers-the-hidden-heroes/wastepickershiddenheros.jpg" class="pollutionpic2">
+                <br>
+                <img src="https://api-donation.greeneration.org/public/impacts/impacts-2.webp" class="pollutionpic3">
                 <ol class="benefits benefits-anim skippable">
                   <li>
                     The Citarum River is considered to be one of the most polluted rivers in the world. With wooden boats,
                     70 waste pickers can remove 5.600 kilograms of trash from the Citarum River. By donating, you help support
                     the valiant efforts of these waste pickers. You help the purchase and creation of boats for them and help 
                     cover the operational costs needed to clean the Citarum River.
-                  </li>
+                  </li><br>
+                
                   <li>
                     Many of the waste pickers in Indonesia are informal workers. They work al day, just to get paid with minimal
                     wage. For this reason many of the families can only afford to cover their basic needs, and not enough to pay for
                     their children's school tuition. By donating, you not only help support the waste pickers, and you also
                     help them provide for their children's school needs.
-                  </li>
-                  <li>And still much more.</li>
+                  </li><br>
+                  <li>And still many more.</li>
                 </ol>
                 <br>
             <p class="donate donate-anim skippable">
-                <a class="more" href="https://donation.greeneration.org/"><u>Learn More and Donate Here!</u></a><br><br>
+                <a class="more" href="https://donation.greeneration.org/"><u>Interested? Learn More and Donate Here!</u></a><br><br>
             </p>
-            <footer>
-                <p class="sources sources-anim skippable smr" id="sources">
-                    <a href="https://bokashiorganko.com/bokashi-library/how-much-waste-do-we-produce-a-day#:~:text=As%20you%20can%20see%2C%20the,a%20sustainable%20living%20for%20beginners.">Source 1</a>
-                    <a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">Source 2</a>
-                    <a href="https://solarschools.net/knowledge-bank/sustainability/reduce-reuse-recycle">Source 3</a>
-                    <a href="https://donation.greeneration.org/en">Source 4</a>
-                    <a href="">Source 5</a>
-                </p>
-            </footer>
+            <section class="footerer">
+              <h1>VNJ</h1>
+              <h2>Public Transportation</h2>
+              <div class="contacter">
+              <p>Contact Us</p>
+              <ul>
+                  <li><a href="https://www.instagram.com/varensutanto?igsh=a2htMzNoM2FqbjFr">Varen</a></li>
+                  <li><a href="https://www.instagram.com/mxpsql?igsh=MWJnM2lpb2RpanVwZQ==">Noah</a></li>
+                  <li><a href="https://www.instagram.com/jag.pz?igsh=NXRvaTQ5YWw4bG93">Jamie</a></li>
+              </ul>
+          </div>
+              <hr class="solid bottoming">
+              <div class="sourcesing">
+              <p>Sources:</p>
+              <ul>
+                  <li><a href="https://bokashiorganko.com/bokashi-library/how-much-waste-do-we-produce-a-day#:~:text=As%20you%20can%20see%2C%20the,a%20sustainable%20living%20for%20beginners.">Source 1</a></li>
+                  <li><a href="https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/national-overview-facts-and-figures-materials">Source 2</a></li>
+                  <li><a href="https://solarschools.net/knowledge-bank/sustainability/reduce-reuse-recycle">Source 3</a></li>
+                  <li><a href="https://donation.greeneration.org/en">Source 4</a></li>
+              </ul>
+          </div>
+          </section>
         <script src="/js/r3gdialogs.js"></script>
         <script src="/js/r3gskippy.js"></script>
+        <script src="/js/r3gsel.js"></script>
     </body>
 </html>
