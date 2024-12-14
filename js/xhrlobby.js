@@ -262,10 +262,10 @@ document.addEventListener("DOMContentLoaded", function(){ // On ready, reference
                         imgf.onmouseover = createOnHoverBox(imgf, dset, titler, deskrip);
                         imgf.onmouseout = createOnUnhoverBox(imgf, dset, titler, deskrip);
                     }
-                }, 400);
-            }, 400); //3430
-        }, 400); // 3230
-    }, 2620);
+                }, 300);
+            }, 300); //3430
+        }, 300); // 3230
+    }, 2520);
 
     for(const a of ases) {
         a.onclick = function(e) {
