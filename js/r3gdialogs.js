@@ -64,7 +64,6 @@ recycleO.onclick = genOpener(recycleD, [reduceD, reuseD]);
 
 for(const d of Ds){
     d.onClose = onCloseAnyAll;
-    // d.style.pointerEvents = "none";
     d.onclick = d.onClose;
 }
 

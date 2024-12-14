@@ -16,16 +16,6 @@ body{
 .first {
    margin-bottom: 13vh;
 }
-/*.bg {
-   min-height: 90vh;
-   width: 100%;
-   overflow-x:hidden;
-   background-position: center;
-   background-repeat:no-repeat;
-   background-attachment:fixed;
-   background-size: cover;
-   filter: blur(8px);
-}*/
 .yap2{
    padding: 8vh 13vw 5vw 13vw;
    color:white;
@@ -38,7 +28,7 @@ body{
 .navbar1{
    color:white;
    height:3vh;
-   margin-top:8vh;
+   margin-top:-5vh;
    margin-left:5vw;
    position:fixed;
    justify-content:center;
@@ -52,87 +42,8 @@ body{
    z-index: 10;
    text-decoration:underline;
 }
-
-/*
- .button {
-   align-items: center;
-   background: 0 0;
-   border: none;
-   border-radius: 6.25rem;
-   color: var(--color-surface-white);
-   cursor: pointer;
-   display: inline-flex;
-   font-size: 1.2rem;
-   font-weight: 600;
-   gap: 0.363636em;
-   justify-content: center;
-   letter-spacing: -0.01em;
-   line-height: 1.04545;
-   overflow: hidden;
-   padding: 0.9375rem 1.5rem;
-   position: relative;
-   text-decoration: none;
-   word-break: break-word;
-   text-decoration: none;
- }
- 
- .button--stroke:after {
-   bottom: 0;
-   left: 0;
-   position: absolute;
-   right: 0;
-   top: 0;
- }
- 
- .button--stroke:after {
-   border: 0.125rem solid var(--color-surface-white);
-   border-radius: 6.25rem;
-   content: "";
-   pointer-events: none;
- }
- 
- .button__label {
-   position: relative;
-   text-align: center;
-   transition: color 50ms var(--ease-in-out-quart);
- }
- 
- .button--stroke:hover .button__label {
-   transition: color 0.15s var(--ease-in-out-quart);
- }
- 
- .button__flair {
-   bottom: 0;
-   left: 0;
-   pointer-events: none;
-   position: absolute;
-   right: 0;
-   top: 0;
- }
- 
- .button--stroke .button__flair {
-   transform: scale(0);
-   transform-origin: 0 0;
-   will-change: transform;
- }
- 
- .button__flair:before {
-   aspect-ratio: 1/1;
-   background-color: var(--color-surface-white);
-   border-radius: 50%;
-   content: "";
-   display: block;
-   left: 0;
-   pointer-events: none;
-   position: absolute;
-   top: 0;
-   transform: translate(-50%, -50%);
-   width: 170%;
- }
-CHECK LATER*/
-
 .header {
-   min-height: 90vh;
+   min-height: 100vh;
    width: 100%;
    overflow-x:hidden;
    background-position: center;
@@ -144,7 +55,7 @@ CHECK LATER*/
    width: 100%;
    color: #fff;
    position: absolute;
-   top: 30%;
+   top: 50%;
    left: 50%;
    transform: translate(-50%,-50%);
    text-align: center;
@@ -252,7 +163,8 @@ CHECK LATER*/
    object-fit:cover;
    object-position:fixed;
    float:right;
-   padding: 10vh 0 0 10vh
+   padding: 5vh 0 0 10vw;
+   margin-right: 0;
 }
 .pubimage2 {
    height:40vh;
@@ -261,8 +173,20 @@ CHECK LATER*/
    object-fit:cover;
    object-position:fixed;
    float:right;
-   padding: 5vh 0 0 10vh;
+   padding: 20vh 0 10vh 10vw;
+   margin-right:-34vw;
 }
+.pubimage3{
+   height:40vh;
+   width:25vw;
+   display:flex;
+   object-fit:cover;
+   object-position:fixed;
+   float:right;
+   margin-right:1vw;
+   padding: 20vh 0 10vh 10vw;
+}
+
 .footer {
    background-color: #1a1a1a;
    font-family: "Arimo";
@@ -326,15 +250,67 @@ CHECK LATER*/
    gap: 2rem;
    float: right;
    padding-right: 10vh;
-   margin-top: -5.8vh;
+   margin-top: -5.9vh;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
    div.sources ul{
       display: flex;
-      gap: 5px;
+      gap: 4px;
       float: right;
       padding-right: 10vh;
-      margin-top: -5.8vh;
+      margin-top: -4.8vh;
+   }
+   .sources {
+      margin-left: 10vh;
+      justify-content: space-between;
+      padding-bottom: 5vh;
+      font-size: 13px;
+   }
+   .footer h1 {
+      color:white;
+      font-size: 8vh;
+      font-weight: 800;
+      padding: 5vh 0 0 10vh;
+      display: flex;
+   }
+   .footer h2 {
+      color: white;
+      font-weight: 400;
+      margin: -10vh 0 0 10vh;
+      font-size: 2vh;
+      display: flex;
+   }
+   .contact {
+      float: right;
+      margin: -12.3vh 10vh 0 0;
+      font-size: 2vh;
+   }
+   .pubimage1 {
+      height:20vh;
+      width:30vw;
+      display:flex;
+      object-fit:cover;
+      object-position:fixed;
+      float:right;
+      padding: 5vh 0 0 5vw;
+      margin-right: 0;
+   }
+   .pubimage2 {
+      height:20vh;
+      width:30vw;
+      display:flex;
+      object-fit:cover;
+      float:right;
+      padding: 5vh 33vw 5vh 5vw;
+      margin-right:-34vw;
+   }
+   .pubimage3{
+      height:20vh;
+      width:30vw;
+      display:flex;
+      object-fit:cover;
+      object-position:fixed;
+      float:right;
+      padding: 5vh 0 5vh 5vw;
    }
 }
-/*please don't grade how terribly organized everything is :')*/

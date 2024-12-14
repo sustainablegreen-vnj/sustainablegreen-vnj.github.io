@@ -1,9 +1,6 @@
-.splide__track{
-    height:60vh;
-}
 .splide__slide {
-    width: 80vw;
-    height: 100vh;
+    width: auto;
+    height:auto;
     background: #424242;
     font-family: "Space Mono", monospace;
     font-weight: 400;
@@ -12,9 +9,6 @@
     font-size: 25px;
     
 }
-#vcarousel {
-    height: 20%;
-}
-.splide_list {
-
+.splide__arrows--ttb .splide__arrow--next {
+    transform: translate(-510%);
 }

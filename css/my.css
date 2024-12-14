@@ -18,19 +18,31 @@ as the writer of this css, if the code works don't touch it
    transform: scale(1);
 }
 
-.imsg {
+.imsg { /* For the descriptions */
    z-index: 9;
    color: white;
+   
+}
+
+.imsg .commonmonkeypatch {
+   
+   padding-left: 10px;
+   padding-right: 10px;
+
 }
 
 .imsg.top {
-   top: 25vh;
+   top: 35vh;
    position: absolute;
+   font-size: 50px;
+   font-family:'Space Mono', monospace;
+   color:white;
 }
 
 .imsg.bottom {
    top: 65vh;
    position: absolute;
+   font-size:0;
 }
 
 :root { /* Put CSS Variables here */
@@ -77,7 +89,15 @@ as the writer of this css, if the code works don't touch it
    font-style: normal;
    animation:none;
    transform:scale(2);
+   background-attachment:fixed;
+   background-position:center;
+   background-repeat:no-repeat;
+   min-height:100%;
+   min-width: 100% cover;
+   background-position-x: center;
    opacity:0;
+   border-color:white;
+   border-width:3px;
 }
 .xhrpotbox{
    gap:2vmax;
@@ -188,6 +208,8 @@ as the writer of this css, if the code works don't touch it
    position:absolute;
    text-decoration:bold;
    animation: appear 6s forwards;
+   font-family: "Arimo";
+   font-weight: 400;
 }
 
 
@@ -356,7 +378,7 @@ as the writer of this css, if the code works don't touch it
       background-position:center;
       background-repeat:no-repeat;
       padding-top:1vh;
-      min-height:150vh;
+      min-height:80vh;
       min-width: 100% cover;
       background-position-x: center;
       padding-bottom:3vh; 
@@ -529,7 +551,7 @@ as the writer of this css, if the code works don't touch it
 
    #ReduceDialog{
       height:75%;
-      width:30%;
+      width:70%;
       margin-right:14vw;
       background-color:black;
       color:white;
@@ -539,7 +561,7 @@ as the writer of this css, if the code works don't touch it
 
    #ReuseDialog{
       height:75%;
-      width: 30%;
+      width: 70%;
       margin-right:14vw;
       background-color:black;
       color:white;
@@ -549,7 +571,7 @@ as the writer of this css, if the code works don't touch it
 
    #RecycleDialog{
       height:75%;
-      width:30%;
+      width:70%;
       background-color:black;
       color:white;
       justify-content:justify;
@@ -892,23 +914,33 @@ as the writer of this css, if the code works don't touch it
       border-radius: 50%;
       background-color:rgb(31, 32, 40);
    }
-
-
-
-
-
-/*FOR PLASTICS.HTML*/
-.yap1 {
- background: #2c2c2c;
- min-height: 90vh;
- width: 100%;
- overflow-x:hidden;
- background-position: center;
- background-repeat:no-repeat;
- background-attachment:fixed;
- background-size: cover;
+   .reduceimgfun {
+      margin: 10vh 0 0 -20vh;
+      display: flex;
+      float: left;
+      padding-right: 10vh;
+      width: 80vh;
+   }
+   .reuseimgfun {
+      margin: 0 0 0 -20vh;
+      display: flex;
+      float: left;
+      padding-right: 10vh;
+      width: 80vh;
+   }
+   .recycleimgfun {
+      margin: 0 0 0 0vh;
+      display: flex;
+      float: left;
+      padding-right: 10vh;
+      width: 70vh;
+   }
 }
-}
+
+
+
+
+
 
 @media only screen and (max-width:640px){
 
@@ -942,6 +974,7 @@ as the writer of this css, if the code works don't touch it
       z-index: 15;
       text-decoration:underline;
    }
+
 
    .breaker{
       width:100%;

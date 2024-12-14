@@ -1,9 +1,10 @@
 let sel = null;
 document.addEventListener( "DOMContentLoaded", function() {
-    sel = new Splide("#vcarousel", {
+    sel = new Splide("#vcarousel", { // Creates the carousel
         autoHeight: true,
         direction: "ttb",
-        height: '100vh',
+        height: '53vh',
+        perPage: 1
     });
-    sel.mount();
+    sel.mount(); // Mounts it actually for real. This is very important as if this doesn't exist, no carousel.
 });
