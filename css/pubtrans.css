@@ -158,27 +158,23 @@ body{
 }
 .pubimage1 {
    height:40vh;
-   width:25vw;
    display:flex;
    object-fit:cover;
    object-position:fixed;
    float:right;
-   padding: 5vh 0 0 10vw;
+   padding: 5vh 0 5vh 10vw;
    margin-right: 0;
 }
 .pubimage2 {
    height:40vh;
-   width:25vw;
    display:flex;
    object-fit:cover;
-   object-position:fixed;
    float:right;
-   padding: 20vh 0 10vh 10vw;
-   margin-right:-34vw;
+   padding: 5vh 0vw 5vh 5vw;
+   
 }
 .pubimage3{
    height:40vh;
-   width:25vw;
    display:flex;
    object-fit:cover;
    object-position:fixed;
